@@ -1,0 +1,130 @@
+/*  Cores usadas no Projeto  */
+:root {
+  --primary: #00A0E6;
+  --primary-dark: #0088C6;
+  --secondary: #FF6B00;
+  --dark: #2D3748;
+  --light: #F7FAFC;
+  --gray: #EDF2F7;
+  --text: #2D3748;
+}
+
+/*  Estilização da PagDown  */
+.download-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2rem 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  font-weight: 600;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 160, 230, 0.4);
+}
+
+.download-btn.loading {
+  background-color: var(--gray);
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid white;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.system-requirements {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.system-requirements h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.requirements-list {
+  list-style-type: none;
+}
+
+.requirements-list li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.requirements-list li::before {
+  content: "•";
+  color: var(--secondary);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cta-section h2 {
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-image {
+    order: -1;
+    height: 250px;
+  }
+  
+  .system-requirements {
+    text-align: center;
+  }
+  
+  .requirements-list li {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .download-btn {
+    width: 100%;
+  }
+}

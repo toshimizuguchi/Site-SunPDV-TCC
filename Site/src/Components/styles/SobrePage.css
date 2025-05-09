@@ -1,0 +1,129 @@
+
+/*  Cores usadas no Projeto */
+:root {
+    --primary: #00A0E6;
+    --primary-dark: #0088C6;
+    --secondary: #FF6B00;
+    --dark: #2D3748;
+    --light: #F7FAFC;
+    --gray: #EDF2F7;
+    --text: #2D3748;
+  }
+  
+  /* Estilização da PagSobr*/
+  .hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--light) 0%, var(--gray) 100%);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+  }
+  
+  .title {
+    color: inherit; /* Mantém a cor padrão do texto */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sun-blue {
+    color: var(--primary) !important;
+  }
+  .pdv-orange {
+    color: var(--secondary) !important;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  .section-title h2 span {
+    color: var(--secondary);
+  }
+  
+  .section-title p {
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .features-grid, .team-grid, .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .feature-card, .team-card, .stat-item {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .feature-card:hover, .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .history-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+  }
+  
+  .history-content p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .team-avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+ 
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 2rem 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .features-grid, .team-grid, .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }

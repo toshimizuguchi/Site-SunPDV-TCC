@@ -1,0 +1,229 @@
+/* RegisterStyle.css */
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --primary: #00A0E6;
+    --primary-dark: #0088C6;
+    --secondary: #FF6B00;
+    --dark: #2D3748;
+    --light: #F7FAFC;
+    --gray: #EDF2F7;
+    --text: #2D3748;
+  }
+  
+  /* ===== ESTILOS DA PÁGINA ===== */
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem;
+  }
+  
+  .register-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .logo-text span {
+    color: var(--secondary);
+  }
+  
+  .sub-title {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 160, 230, 0.1);
+  }
+  .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: white;
+    appearance: none; /* Remove o estilo padrão do navegador */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  /* Estilo estilo quando clica  */
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 160, 230, 0.1);
+  }
+  
+  /* Estilo das seleções */
+  .form-control option {
+    padding: 0.5rem;
+    color: var(--text);
+  }
+  
+  /* Estilo para quando estiver desabilitado */
+  .form-control:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+  }
+  
+  
+  .register-btn {
+    width: 100%;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .register-btn:hover {
+    background-color: #e05d00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+  
+  .login-redirect {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #718096;
+  }
+  
+  .login-redirect span {
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .login-redirect span:hover {
+    text-decoration: underline;
+  }
+  
+  .terms {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #718096;
+    text-align: center;
+  }
+  
+  .terms a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
+  .footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: #CBD5E0;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: white;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #4A5568;
+    color: #A0AEC0;
+    font-size: 0.9rem;
+  }
+  
+  /* Mantendo os estilos do header e footer do modelo anterior */
+ 
+  
+  @media (max-width: 768px) {
+    .register-card {
+      padding: 2rem 1.5rem;
+    }
+    
+    .logo-text {
+      font-size: 2rem;
+    }
+    
+    .sub-title {
+      font-size: 1.2rem;
+    }
+    
+  }
+  

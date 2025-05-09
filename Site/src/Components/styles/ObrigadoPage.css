@@ -1,0 +1,202 @@
+/* ObrigadoPage.css */
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+    --primary: #00A0E6;
+    --primary-dark: #0088C6;
+    --secondary: #FF6B00;
+    --dark: #2D3748;
+    --light: #F7FAFC;
+    --gray: #EDF2F7;
+    --text: #2D3748;
+  }
+  
+  /* ===== ESTILOS DA PÁGINA ===== */
+  .thank-you-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+  }
+  
+  .thank-you-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .checkmark {
+    font-size: 4rem;
+    color: #4BB543;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+  
+  .steps-container {
+    text-align: left;
+    margin: 2.5rem 0;
+  }
+  
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray);
+  }
+  
+  .step:last-child {
+    border-bottom: none;
+  }
+  
+  .step-number {
+    background-color: var(--primary);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h3 {
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .step-content p {
+    color: #718096;
+    line-height: 1.5;
+  }
+  
+  .register-btn {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin: 2rem 0;
+  }
+  
+  .register-btn:hover {
+    background-color: #e05d00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+  }
+  
+  .support-text {
+    color: #718096;
+    margin-top: 1.5rem;
+  }
+  
+  .support-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .support-link:hover {
+    text-decoration: underline;
+  }
+  .footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: #CBD5E0;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: white;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #4A5568;
+    color: #A0AEC0;
+    font-size: 0.9rem;
+  }
+  .title {
+    color: inherit; /* Mantém a cor padrão do texto */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sun-blue {
+    color: var(--primary) !important;
+  }
+  .pdv-orange {
+    color: var(--secondary) !important;
+  }
+  
+ /*Para dispositivos móveis*/
+  
+  @media (max-width: 768px) {
+    .thank-you-card {
+      padding: 2rem 1.5rem;
+    }
+    
+    .title {
+      font-size: 1.8rem;
+    }
+    
+    .step {
+      flex-direction: column;
+    }
+    
+    .step-number {
+      margin-bottom: 0.5rem;
+    }
+  }
