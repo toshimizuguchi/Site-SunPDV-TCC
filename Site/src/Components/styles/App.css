@@ -6,7 +6,7 @@
   --primary-dark: #0088C6;
   --secondary: #FF6B00; /* Laranja similar à cor do sol */
   --dark: #2D3748;
-  --light: #F7FAFC;
+  --light: #E7ECEF;
   --gray: #EDF2F7;
   --text: #2D3748;
 }
@@ -39,7 +39,7 @@ a {
 
 /* HEADER */
 .header {
-  background-color: white;
+  background-color: var(--light);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -47,9 +47,9 @@ a {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,13 +71,15 @@ a {
 .logo-sunpdv {
   display: flex;
   align-items: center;
+  
 }
 
 .sun-logo {
-  height: 2.5rem; /* mesma altura que o texto */
+  height: 4rem; /* mesma altura que o texto */
   width: auto;
   object-fit: contain;
   margin-right: 0.2rem;
+
 }
 /* NAV LINKS */
 .nav-links {
@@ -195,7 +197,7 @@ a {
 }
 
 .feature-card {
-  background-color: white;
+  background-color: var(--light);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);

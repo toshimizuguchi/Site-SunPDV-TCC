@@ -24,6 +24,41 @@
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
+  .nav-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--secondary);
+}
+
+.logo-sunpdv {
+  display: flex;
+  align-items: center;
+  
+}
+
+.sun-logo {
+  height: 4rem; /* mesma altura que o texto */
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.2rem;
+
+}
   
   .sun-blue {
     color: var(--primary) !important;

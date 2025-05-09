@@ -19,6 +19,7 @@ const PrivacyPolicy = () => {
             <h3>1.1 Informações de Cadastro</h3>
             <ul>
               <li>Endereço de e-mail</li>
+              <li>Dados pessoais como Nome</li>
             </ul>
 
             <h3>1.2 Dados de Uso</h3>
