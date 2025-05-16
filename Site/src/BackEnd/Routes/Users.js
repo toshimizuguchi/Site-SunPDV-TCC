@@ -1,13 +1,7 @@
-import express from 'express';
-import { UserController } from '../controllers/userController.js';
-import { authenticate } from '../middlewares/authMiddleware.js';
-
+const express = require('express');
 const router = express.Router();
+const { registerUser } = require('../controllers/userController');
 
-// Rotas públicas
-router.post('/register', UserController.register);
+router.post('/register', registerUser);
 
-// Rotas protegidas
-router.get('/profile', authenticate, UserController.getUserProfile);
-
-export default router;
+module.exports = router;
