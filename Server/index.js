@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const mysql = express();
+const mysql = require('mysql');
 
 const db = mysql.createPool({
     
         host: 'localhost',
         user: 'root',
-        password: 'root',
-        database: '',
+        password: '',
+        database: 'SUN_PDVlocal',
 });
 
 app.get('/', (req, res) => {
