@@ -1,12 +1,22 @@
 
 import { useNavigate } from 'react-router-dom';
 import './styles/RegisterStyle.css';
+import Axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    Axios.post("https://localhost:3001/cadastro", {
+      Nome: values.Nome,
+      Email: values.Email,
+      Senha: values.Senha,
+      Cargo: values.Cargo,
+
+    }).then((response) => {
+    console.log(response);
+    });
     // Lógica de cadastro aqui
     navigate('/'); // Redireciona após cadastro
   };
