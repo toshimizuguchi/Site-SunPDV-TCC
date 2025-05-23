@@ -11,8 +11,8 @@ const db = mysql.createPool({
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+    db.query("INSERT INTO login_sistema ()")
+})
 app.listen(3001, () => {
     console.log("Rodando na porta 3001");
 })
