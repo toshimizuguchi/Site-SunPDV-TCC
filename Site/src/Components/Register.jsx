@@ -1,10 +1,9 @@
 
 import { useNavigate } from 'react-router-dom';
 import './styles/RegisterStyle.css';
-
 import Axios from "axios";
 
-import Axios from 'axios';
+
 
 
 const Register = () => {
@@ -48,9 +47,10 @@ const Register = () => {
         <div className="register-container">
           <div className="register-card">
             <div className="logo-container">
-              <span className="logo-text">Sun<span>PDV</span></span>
+                <img className="sunreg-logo" src="/logo2.png" />
+             </div>
               <span className="sub-title">Crie sua conta</span>
-            </div>
+            
             
             <form onSubmit={handleSubmit}>
               <div className="form-group">
