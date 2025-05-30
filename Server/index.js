@@ -1,35 +1,53 @@
 const express = require('express');
-const app = express();
-const mysql = require('mysql');
+const sql = require('mssql');
 const cors = require('cors');
 
-const db = mysql.createPool({
-    
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'SUN_PDVlocal',
-});
-
+const app = express();
+app.use(cors());
 app.use(express.json());
 
-app.use(cors()); //Usado para nao dar problemas ao conectar o frontend com o backend 
+// Config do banco (ajuste com suas credenciais)
+const dbConfig = {
+    user: 'seu_usuario',
+    password: 'sua_senha',
+    server: 'localhost',
+    database: 'SUN_PDVlocal',
+    options: { encrypt: false }
+};
 
-app.post("/cadastro", (req, res) => {
-    const Nome = req.body.Nome;
-    const Email = req.body.Email;
-    const Senha = req.body.Senha;
-    const Cargo = req.body.Cargo;
-    
+// Rota de cadastro CORRIGIDA
+app.post("/cadastro", async (req, res) => {
+    const { Nome, Email, Senha, Cargo } = req.body;
 
-    db.query("SELECT * FROM login_sistema WHERE Email = ?", [Email], (err, res)  => {
-       if(err){
-        res.send(err);
+    try {
+        const pool = await sql.connect(dbConfig);
+        
+        // 1. Verifica se o email já existe
+        const emailCheck = await pool.request()
+            .input('Email', sql.VarChar, Email)
+            .query('SELECT Email FROM login_sistema WHERE Email = @Email');
 
-       }
-        res.send(result);
-    });
+        if (emailCheck.recordset.length > 0) {
+            return res.status(400).json({ error: "Email já cadastrado!" });
+        }
+
+        // 2. Insere o usuário com a coluna CORRETA (JD_Cargo)
+        await pool.request()
+            .input('Nome', sql.VarChar, Nome)
+            .input('Email', sql.VarChar, Email)
+            .input('Senha', sql.VarChar, Senha)
+            .input('JD_Cargo', sql.Int, Cargo) // Usando JD_Cargo (como na tabela)
+            .query(`
+                INSERT INTO login_sistema (Nome, Email, Senha, JD_Cargo) 
+                VALUES (@Nome, @Email, @Senha, @JD_Cargo)
+            `);
+
+        res.status(200).json({ message: "Cadastro realizado com sucesso!" });
+
+    } catch (err) {
+        console.error("Erro no cadastro:", err);
+        res.status(500).json({ error: "Erro interno no servidor" });
+    }
 });
-app.listen(3001, () => {
-    console.log("Rodando na porta 3001");
-})
+
+app.listen(3001, () => console.log("Servidor rodando na porta 3001"));

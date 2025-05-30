@@ -10,17 +10,34 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    Axios.post("Https://localhost:5000/cadastro", {
-      email: e.target[0].value,
-      name: e.target[1].value,
-      cargo: e.target[2].value
-    }
-    )
-    
+  e.preventDefault(); // Impede o recarregamento da página
 
-    // Lógica de cadastro aqui
-    navigate('/'); // Redireciona após cadastro
-  };
+  const email = e.target[0].value;
+  const name = e.target[1].value;
+  const cargo = e.target[2].value;
+  const senha = e.target[3].value;
+  const confirmSenha = e.target[4].value;
+
+  if (senha !== confirmSenha) {
+    alert("As senhas não coincidem.");
+    return;
+  }
+
+  Axios.post("http://localhost:3001/cadastro", {
+    Nome: name,
+    Email: email,
+    Senha: senha,
+    Cargo: cargo
+  })
+    .then((res) => {
+      alert(res.data.message || "Cadastro feito com sucesso!");
+      navigate('/'); // Redireciona para a home
+    })
+    .catch((err) => {
+      console.error(err);
+      alert("Erro ao cadastrar usuário.");
+    });
+};
 
   
 
@@ -68,18 +85,13 @@ const Register = () => {
               </div>
               <div className="form-group">
                   <label htmlFor="cargo">Cargo</label>
-                  <select 
-                    id="cargo" 
-                    name="cargo" 
-                    required
-                    className="form-control"
-                  >
-                    <option value=""> Selecione seu cargo </option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Gerenter">Moderador</option>
-                    <option value="vendedor">Funcionario</option>
-                    
-                  </select>
+                  <select id="cargo" name="cargo" required className="form-control">
+                    <option value="">Selecione seu cargo</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Moderador</option>
+                    <option value="3">Funcionario</option>
+                </select>
+                  
                 </div>
                               
               <div className="form-group">
