@@ -37,32 +37,18 @@
   align-items: center;
 }
 
-.logo {
+.logo-container {
   display: flex;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  gap: 0.5rem;
-  color: var(--primary);
+  align-items: center; /* Centraliza verticalmente */
 }
 
-.logo span {
-  color: var(--secondary);
-}
-
-.logo-sunpdv {
-  display: flex;
-  align-items: center;
-  
-}
-
-.sun-logo {
-  height: 4rem; /* mesma altura que o texto */
+.sunreg-logo {
+  height: 10rem;
   width: auto;
   object-fit: contain;
   margin-right: 0.2rem;
-
 }
+
   
   .sub-title {
     display: block;
