@@ -1,19 +1,19 @@
 const express = require('express');
 const sql = require('mssql');
 
-
 const app = express();
 app.use(express.json());
 
 // Configuração do SQL Server
 const dbConfig = {
-    user: 'sa', // Usuário do SQL Server
-    password: '', // Senha do banco de dados
-    server: 'localhost', // Host do banco (ou IP)
+    user: 'admintoshi1',
+    password: 'SunPDV123',
+    server: 'localhost', // ou '127.0.0.1'
     database: 'SUN_PDVlocal',
     options: {
-        encrypt: false, // Ajuste conforme necessário
-        trustServerCertificate: true // Necessário para conexões locais
+        encrypt: false,
+        trustServerCertificate: true
+        // instanceName: 'SQLEXPRESS' // descomente se necessário
     }
 };
 
@@ -25,14 +25,14 @@ sql.connect(dbConfig)
 // Endpoint para cadastrar usuário
 app.post('/cadastro', async (req, res) => {
     const { nome, email, senha, cargo } = req.body;
-    
+
     try {
-        const pool = await sql.connect(dbConfig);
-        const result = await pool.request()
+        const conn = await sql.connect(dbConfig);
+        const result = await conn.request()
             .input('nome', sql.VarChar, nome)
             .input('email', sql.VarChar, email)
             .input('senha', sql.VarChar, senha)
-            .input('cargo', sql.Int, cargo) // Cargo está referenciado na tabela
+            .input('cargo', sql.Int, cargo)
             .query("INSERT INTO login_sistema (Nome, Email, Senha, ID_Cargo) VALUES (@nome, @email, @senha, @cargo)");
 
         res.json({ mensagem: "Cadastro realizado com sucesso!" });
@@ -42,7 +42,7 @@ app.post('/cadastro', async (req, res) => {
     }
 });
 
-app.listen(3001, () => {
-    console.log("🔥 Servidor rodando na porta 3001!");
+// Porta do servidor
+app.listen(3000, () => {
+    console.log("🔥 Servidor rodando na porta 3000!");
 });
-
