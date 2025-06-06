@@ -23,7 +23,7 @@ const Register = () => {
     return;
   }
 
-  Axios.post("http://localhost:3001/cadastro", {
+  Axios.post("http://localhost:1433/cadastro", {
     Nome: name,
     Email: email,
     Senha: senha,
