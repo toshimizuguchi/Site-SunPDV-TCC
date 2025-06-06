@@ -1,45 +1,47 @@
-
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Importando axios
 import './styles/RegisterStyle.css';
 
 const Register = () => {
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Lógica de cadastro aqui
-    navigate('/'); // Redireciona após cadastro
-  };
+  // Estados para capturar os dados do formulário
+  const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('');
+  const [cargo, setCargo] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmSenha, setConfirmSenha] = useState('');
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validação básica para confirmar senha
+    if (senha !== confirmSenha) {
+      alert('As senhas não coincidem!');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:3001/cadastro', { email, nome, cargo, senha });
+
+      alert(response.data.mensagem); // Exibir mensagem de sucesso do backend
+      navigate('/'); // Redireciona para a página inicial após cadastro
+    } catch (error) {
+      console.error('Erro ao cadastrar usuário:', error);
+      alert('Erro ao cadastrar usuário!');
+    }
+  };
 
   return (
     <div className="app-container">
-      {/* Navbar */}
       <header className="header">
-        <div className="nav-container">
-          <div className="logo">
-            Sun<span>PDV</span>
-          </div>
-          <nav className="nav-links">
-            <a href="/" className="nav-link">Home</a>
-            <a href="/Sobre-Nos" className="nav-link">Sobre Nós</a>
-            <a href="/Download" className="nav-link">Download</a>
-            
-            
-          </nav>
-        </div>
+        {/* Navbar */}
       </header>
 
-      {/* Conteúdo Principal */}
       <main className="main-content">
         <div className="register-container">
           <div className="register-card">
-            <div className="logo-container">
-              <span className="logo-text">Sun<span>PDV</span></span>
-              <span className="sub-title">Crie sua conta</span>
-            </div>
-            
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -47,91 +49,64 @@ const Register = () => {
                   type="email" 
                   id="email"
                   placeholder="Digite seu email" 
+                  value={email} 
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
               <div className="form-group">
                 <label htmlFor='name'>Nome</label>
-                <input type="Name" placeholder="Digite seu nome completo" required />
+                <input 
+                  type="text" 
+                  placeholder="Digite seu nome completo" 
+                  value={nome} 
+                  onChange={(e) => setNome(e.target.value)}
+                  required 
+                />
               </div>
               <div className="form-group">
-                  <label htmlFor="cargo">Cargo</label>
-                  <select 
-                    id="cargo" 
-                    name="cargo" 
-                    required
-                    className="form-control"
-                  >
-                    <option value=""> Selecione seu cargo </option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Gerenter">Moderador</option>
-                    <option value="vendedor">Funcionario</option>
-                    
-                  </select>
-                </div>
-                              
+                <label htmlFor="cargo">Cargo</label>
+                <select 
+                  id="cargo" 
+                  name="cargo" 
+                  value={cargo} 
+                  onChange={(e) => setCargo(e.target.value)}
+                  required
+                >
+                  <option value="">Selecione seu cargo</option>
+                  <option value="Administrador">Administrador</option>
+                  <option value="Moderador">Moderador</option>
+                  <option value="Funcionario">Funcionário</option>
+                </select>
+              </div>
               <div className="form-group">
                 <label htmlFor="password">Senha</label>
                 <input 
                   type="password" 
                   id="password"
                   placeholder="Digite sua senha" 
+                  value={senha} 
+                  onChange={(e) => setSenha(e.target.value)}
                   required
                   minLength="8"
                 />
               </div>
-              
               <div className="form-group">
                 <label htmlFor="confirm-password">Confirme sua Senha</label>
                 <input 
                   type="password" 
                   id="confirm-password"
                   placeholder="Confirme sua senha" 
+                  value={confirmSenha} 
+                  onChange={(e) => setConfirmSenha(e.target.value)}
                   required
                 />
               </div>
-              
-              <button type="submit" className="register-btn">
-                Criar Conta
-              </button>
+              <button type="submit" className="register-btn">Criar Conta</button>
             </form>
-            
-            
-            
-            <div className="terms">
-              <p>Ao se registrar, você concorda com nossos <a href="/termos">Termos de Serviço</a> e <a href="/privacidade">Política de Privacidade</a></p>
-            </div>
           </div>
         </div>
       </main>
-
-      {/* Rodapé */}
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column">
-            <h3>Sun PDV</h3>
-            <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/Sobre-Nos">Sobre Nós</a></li>
-              <li><a href="/Download">Download</a></li>
-            </ul>
-          </div>
-
-          
-          <div className="footer-column">
-            <h3>Legal</h3>
-            <ul className="footer-links">
-              <li><a href="/privacidade">Política de Privacidade</a></li>
-              <li><a href="/termos">Termos de Uso</a></li>
-              <li><a href="/licenca">Licença</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} Sun PDV. Todos os direitos reservados.</p>
-        </div>
-      </footer>
     </div>
   );
 };
