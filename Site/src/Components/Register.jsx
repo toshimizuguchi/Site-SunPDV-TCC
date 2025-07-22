@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Importando axios
+import axios from 'axios';
 import './styles/RegisterStyle.css';
-import Axios from "axios";
-
-
-
 
 const Register = () => {
   const navigate = useNavigate();
@@ -27,10 +23,15 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/cadastro', { email, nome, cargo, senha });
+      const response = await axios.post('http://localhost:3001/cadastro', {
+        email,
+        nome,
+        senha,
+        cargo: parseInt(cargo) // Envia cargo como número (1, 2 ou 3)
+      });
 
-      alert(response.data.mensagem); // Exibir mensagem de sucesso do backend
-      navigate('/'); // Redireciona para a página inicial após cadastro
+      alert(response.data.mensagem); // Exibe mensagem de sucesso do backend
+      navigate('/'); // Redireciona para a página de login
     } catch (error) {
       console.error('Erro ao cadastrar usuário:', error);
       alert('Erro ao cadastrar usuário!');
@@ -40,13 +41,15 @@ const Register = () => {
   return (
     <div className="app-container">
       <header className="header">
-        {/* Navbar */}
+        {/* Navbar se necessário */}
       </header>
 
       <main className="main-content">
         <div className="register-container">
           <div className="register-card">
             <form onSubmit={handleSubmit}>
+              <h2>Cadastro de Usuário</h2>
+
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input 
@@ -58,16 +61,19 @@ const Register = () => {
                   required
                 />
               </div>
+
               <div className="form-group">
-                <label htmlFor='name'>Nome</label>
+                <label htmlFor='nome'>Nome</label>
                 <input 
                   type="text" 
+                  id="nome"
                   placeholder="Digite seu nome completo" 
                   value={nome} 
                   onChange={(e) => setNome(e.target.value)}
                   required 
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="cargo">Cargo</label>
                 <select 
@@ -78,16 +84,17 @@ const Register = () => {
                   required
                 >
                   <option value="">Selecione seu cargo</option>
-                  <option value="Administrador">Administrador</option>
-                  <option value="Moderador">Moderador</option>
-                  <option value="Funcionario">Funcionário</option>
+                  <option value="1">Administrador</option>
+                  <option value="2">Moderador</option>
+                  <option value="3">Funcionário</option>
                 </select>
               </div>
+
               <div className="form-group">
-                <label htmlFor="password">Senha</label>
+                <label htmlFor="senha">Senha</label>
                 <input 
                   type="password" 
-                  id="password"
+                  id="senha"
                   placeholder="Digite sua senha" 
                   value={senha} 
                   onChange={(e) => setSenha(e.target.value)}
@@ -95,17 +102,19 @@ const Register = () => {
                   minLength="8"
                 />
               </div>
+
               <div className="form-group">
-                <label htmlFor="confirm-password">Confirme sua Senha</label>
+                <label htmlFor="confirmSenha">Confirme sua Senha</label>
                 <input 
                   type="password" 
-                  id="confirm-password"
+                  id="confirmSenha"
                   placeholder="Confirme sua senha" 
                   value={confirmSenha} 
                   onChange={(e) => setConfirmSenha(e.target.value)}
                   required
                 />
               </div>
+
               <button type="submit" className="register-btn">Criar Conta</button>
             </form>
           </div>
