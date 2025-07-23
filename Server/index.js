@@ -8,30 +8,22 @@ app.use(cors());
 
 // Configuração do banco de dados SQL Server
 const dbConfig = {
-  server: 'localhost',
-  database: 'SUN_PDVlocal',
+  user: "sa",
+  password: "SUNPDV123",
+  server: "localhost",
+  database: "SUN_PDVlocal",
   options: {
     encrypt: false,
-    trustServerCertificate: true,
-    
-  },
-  authentication: {
-    type: 'ntlm',
-    options: {
-      domain: 'DESKTOP-0EGRTF5',
-      userName: '',
-      password: ''
-    }
+    trustServerCertificate: true
   }
 };
 
-
-// Testa conexão ao iniciar
+// Testa a conexão ao iniciar o servidor
 sql.connect(dbConfig)
   .then(() => console.log("✅ Conectado ao SQL Server!"))
   .catch(err => console.error("❌ Erro na conexão:", err));
 
-// Endpoint para cadastro de usuário
+// Endpoint de cadastro de usuário
 app.post('/cadastro', async (req, res) => {
   const { nome, email, senha, cargo } = req.body;
 

@@ -23,7 +23,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/cadastro', {
+      const response = await axios.post('http://localhost:3000/cadastro', {
         email,
         nome,
         senha,
@@ -33,9 +33,15 @@ const Register = () => {
       alert(response.data.mensagem); // Exibe mensagem de sucesso do backend
       navigate('/'); // Redireciona para a página de login
     } catch (error) {
-      console.error('Erro ao cadastrar usuário:', error);
-      alert('Erro ao cadastrar usuário!');
-    }
+  console.error('Erro ao cadastrar usuário:', error);
+  if (error.response) {
+    console.log('Erro do servidor:', error.response.data);
+    alert(error.response.data.erro || 'Erro ao cadastrar usuário!');
+  } else {
+    alert('Erro de conexão com o servidor!');
+  }
+}
+
   };
 
   return (

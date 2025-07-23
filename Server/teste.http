@@ -1,10 +1,7 @@
 POST http://localhost:3000/cadastro
-Content-Type: application/json
-
 {
-    "nome": "Vinicius",
-    "email": "vinicius@email.com",
-    "senha": "senha123",
-    "cargo": 1
+  "email": "teste@email.com",
+  "nome": "Teste",
+  "senha": "12345678",
+  "cargo": 1
 }
-
