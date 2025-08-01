@@ -54,9 +54,11 @@ O projeto é dividido em duas partes principais:
 - React Router DOM
 - React Icons
 - CSS Puro
+- Sass
+- Node.js
 
 ### 💽 Sistema Desktop (opcional se for parte do repositório)
-- [Ex: Electron, C#, Python Tkinter... depende do que você usou]
+- Java
 
 ---
 
