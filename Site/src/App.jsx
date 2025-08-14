@@ -1,5 +1,5 @@
 import './Components/styles/App.css'; // Estilização da pagina
-import { Link } from 'react-router-dom'; //navegar de forma mais rapida e eficiente
+import { Link, useNavigate } from 'react-router-dom'; //navegar de forma mais rapida e eficiente
 
 
 function App() {

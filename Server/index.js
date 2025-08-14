@@ -10,10 +10,10 @@ app.use(cors());
 
 // Configuração do banco de dados SQL Server
 const dbConfig = {
-  user: "",
-  password: "",
-  server: "",
-  database: "",
+  user: "sa",
+  password: "SUNPDV123",
+  server: "localhost",
+  database: "SUN_PDVlocal",
   options: {
     encrypt: false,
     trustServerCertificate: true

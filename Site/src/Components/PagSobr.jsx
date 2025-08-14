@@ -1,4 +1,4 @@
-
+import { Link, useNavigate} from "react-router-dom";
 import './styles/SobrePage.css'; // Estilização da pagina 
 
 const PagSobr = () => {
@@ -14,9 +14,9 @@ const PagSobr = () => {
             Sun<span>PDV</span>
           </div>
           <nav className="nav-links">
-            <a href="/" className="nav-link">Home</a>
-            <a href="/Sobre-Nos" className="nav-link active">Sobre Nós</a>
-            <a href="/Download" className="nav-link">Download</a>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/Sobre-Nos" className="nav-link active">Sobre Nós</Link>
+            <Link to="/Download" className="nav-link">Download</Link>
             
            
           </nav>
@@ -125,25 +125,25 @@ const PagSobr = () => {
           <div className="footer-column">
             <h3>Sun PDV</h3>
             <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/Sobre-Nos">Sobre Nós</a></li>
-              <li><a href="/Download">Download</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/Sobre-Nos">Sobre Nós</Link></li>
+              <li><Link to="/Download">Download</Link></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h3>Suporte</h3>
             <ul className="footer-links">
-              <li><a href="/contato">Contato</a></li>
+              <li><Link to="/contato">Contato</Link></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h3>Legal</h3>
             <ul className="footer-links">
-              <li><a href="/privacidade">Política de Privacidade</a></li>
-              <li><a href="/termos">Termos de Uso</a></li>
-              <li><a href="/licenca">Licença</a></li>
+              <li><Link to="/privacidade">Política de Privacidade</Link></li>
+              <li><Link to="/termos">Termos de Uso</Link></li>
+              <li><Link to="/licenca">Licença</Link></li>
             </ul>
           </div>
         </div>

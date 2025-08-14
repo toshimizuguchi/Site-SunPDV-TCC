@@ -13,12 +13,17 @@ const Register = () => {
   const [senha, setSenha] = useState('');
   const [confirmSenha, setConfirmSenha] = useState('');
 
+  // Estados para mensagens
+  const [mensagem, setMensagem] = useState(null);
+  const [tipoMensagem, setTipoMensagem] = useState(""); // "sucesso" ou "erro"
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validação básica para confirmar senha
+    // Validação de senha
     if (senha !== confirmSenha) {
-      alert('As senhas não coincidem!');
+      setMensagem("As senhas não coincidem!");
+      setTipoMensagem("erro");
       return;
     }
 
@@ -27,21 +32,26 @@ const Register = () => {
         email,
         nome,
         senha,
-        cargo: parseInt(cargo) // Envia cargo como número (1, 2 ou 3)
+        cargo: parseInt(cargo)
       });
 
-      alert(response.data.mensagem); // Exibe mensagem de sucesso do backend
-      navigate('/'); // Redireciona para a página de login
-    } catch (error) {
-  console.error('Erro ao cadastrar usuário:', error);
-  if (error.response) {
-    console.log('Erro do servidor:', error.response.data);
-    alert(error.response.data.erro || 'Erro ao cadastrar usuário!');
-  } else {
-    alert('Erro de conexão com o servidor!');
-  }
-}
+      setMensagem(response.data.mensagem);
+      setTipoMensagem("sucesso");
 
+      // Redireciona após 2 segundos
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+
+    } catch (error) {
+      console.error('Erro ao cadastrar usuário:', error);
+      if (error.response) {
+        setMensagem(error.response.data.erro || 'Erro ao cadastrar usuário!');
+      } else {
+        setMensagem('Erro de conexão com o servidor!');
+      }
+      setTipoMensagem("erro");
+    }
   };
 
   return (
@@ -53,6 +63,14 @@ const Register = () => {
       <main className="main-content">
         <div className="register-container">
           <div className="register-card">
+
+            {/* Mensagem de alerta */}
+            {mensagem && (
+              <div className={`alerta ${tipoMensagem}`}>
+                {mensagem}
+              </div>
+            )}
+
             <form onSubmit={handleSubmit}>
               <h2>Cadastro de Usuário</h2>
 
