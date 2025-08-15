@@ -33,6 +33,7 @@ const Register = () => {
         nome,
         senha,
         cargo: parseInt(cargo)
+      
       });
 
       setMensagem(response.data.mensagem);
@@ -48,7 +49,7 @@ const Register = () => {
       if (error.response) {
         setMensagem(error.response.data.erro || 'Erro ao cadastrar usuário!');
       } else {
-        setMensagem('Erro de conexão com o servidor!');
+        setMensagem('Erro ao cadastrar o usuário!');
       }
       setTipoMensagem("erro");
     }
