@@ -2,9 +2,9 @@
 
 /* Cores usadas no Projeto  */
 :root {
-  --primary: #00A0E6; /* Azul similar à cor do céu */
-  --primary-dark: #0088C6;
-  --secondary: #FF6B00; /* Laranja similar à cor do sol */
+  --primary: #006989; /* Azul similar à cor do céu */
+  --primary-dark: #0c5b74;
+  --secondary: #1c414d; /* Laranja similar à cor do sol */
   --dark: #2D3748;
   --light: #E7ECEF;
   --gray: #EDF2F7;
@@ -163,12 +163,20 @@ a {
 .hero-image {
   background-color: var(--gray);
   border-radius: 10px;
-  height: 500px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.img-tela{
+  
+  display: flex;
+  height: 300px;
+  
+  background-color: #f0f0f0; /* só para ver o espaço, opcional */
+
 }
 
 /* FEATURES SECTION */

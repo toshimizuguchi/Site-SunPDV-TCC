@@ -36,7 +36,9 @@ function App() {
           </div>
           <div className="hero-image">
             {/* Aqui viria uma imagem */}
-            <span>Imagem do Sistema</span>
+            <div class="img-tela">
+            <img src="./public/tela-login.png" alt="Logo tela login"></img>
+            </div>
           </div>
         </section>
 
@@ -60,11 +62,7 @@ function App() {
               <p>Funciona em Windows e Linux sem problemas de compatibilidade</p>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Relatórios Completos</h3>
-              <p>Geração automática de relatórios de vendas e estoque</p>
-            </div>
+            
           </div>
         </section>
       </main>
