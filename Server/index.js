@@ -40,7 +40,7 @@ app.post('/cadastro', async (req, res) => {
       .input('email', sql.VarChar, email)
       .input('senha', sql.VarChar, senhaHash)
       .input('cargo', sql.Int, cargo)
-      .query("INSERT INTO login_sistema (Nome, Email, Senha, ID_Cargo) VALUES (@nome, @email, @senha, @cargo)");
+      .query("INSERT INTO login_sistema (Nome, Email, Senha, ID_Cargo, ID_Permissao) VALUES (@nome, @email, @senha, @cargo, @permissao)");
 
     res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" });
   } catch (error) {
