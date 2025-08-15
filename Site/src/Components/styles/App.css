@@ -6,8 +6,8 @@
   --primary-dark: #0c5b74;
   --secondary: #1c414d; /* Laranja similar à cor do sol */
   --dark: #2D3748;
-  --light: #E7ECEF;
-  --gray: #EDF2F7;
+  --light: #f8f9fa;
+  --gray: #006989;
   --text: #2D3748;
 }
 
@@ -53,6 +53,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient( #c0ecfa, #006989);
 }
 
 .logo {
@@ -148,7 +149,7 @@ a {
 }
 
 .btn-primary {
-  background-color: var(--primary);
+  background-color:#e6c009;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -157,7 +158,7 @@ a {
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: var();
 }
 
 .hero-image {

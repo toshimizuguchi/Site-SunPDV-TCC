@@ -5,11 +5,10 @@
   --primary-dark: #0c5b74;
   --secondary: #1c414d; /* Laranja similar à cor do sol */
   --dark: #2D3748;
-  --light: #E7ECEF;
-  --gray: #EDF2F7;
+ --light: #f8f9fa;
+  --gray: #006989;
   --text: #2D3748;
 }
-
 /* ===== ESTILOS DA PÁGINA ===== */
 .register-container {
     display: flex;
@@ -35,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient( #c0ecfa, #006989);
 }
 
 .logo-container {
