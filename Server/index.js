@@ -24,7 +24,7 @@ app.post('/cadastro', async (req, res) => {
         INSERT INTO login_sistema (Nome, Email, Senha, ID_Cargo, ID_Permissao) 
         VALUES (@nome, @email, @senha, @cargo, @idPermissao)
       `);
-
+      
     res.json({ mensagem: 'Usuário cadastrado com sucesso!' });
   } catch (error) {
     console.error('Erro ao cadastrar usuário:', error);

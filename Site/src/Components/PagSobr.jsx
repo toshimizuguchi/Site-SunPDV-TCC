@@ -147,7 +147,7 @@ const PagSobr = () => {
             </ul>
           </div>
         </div>
-
+          
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} Sun PDV. Todos os direitos reservados.</p>
         </div>

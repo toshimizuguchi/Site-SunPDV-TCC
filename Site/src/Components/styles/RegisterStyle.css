@@ -1,15 +1,14 @@
 /* RegisterStyle.css */
 /* ===== VARIÁVEIS DE CORES ===== */
 :root {
-    --primary: #00A0E6;
-    --primary-dark: #0088C6;
-    --secondary: #FF6B00;
-    --dark: #2D3748;
-    --light: #F7FAFC;
-    --gray: #EDF2F7;
-    --text: #2D3748;
+  --primary: #006989; /* Azul similar à cor do céu */
+  --primary-dark: #0c5b74;
+  --secondary: #1c414d; /* Laranja similar à cor do sol */
+  --dark: #2D3748;
+ --light: #f8f9fa;
+  --gray: #006989;
+  --text: #2D3748;
 }
-
 /* ===== ESTILOS DA PÁGINA ===== */
 .register-container {
     display: flex;
@@ -35,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient( #c0ecfa, #006989);
 }
 
 .logo-container {

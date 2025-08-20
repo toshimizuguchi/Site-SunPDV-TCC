@@ -71,7 +71,7 @@ const DpsInstall = () => {
             </button>
 
             <p className="support-text">
-              Precisa de ajuda? <a href="https://wa.me/12997703313" className="support-link">Fale com nosso suporte</a>
+              Precisa de ajuda? <Link to="https://wa.me/12997703313" className="support-link">Fale com nosso suporte</Link>
             </p>
           </div>
         </section>
