@@ -1,7 +1,0 @@
-POST http://localhost:3000/cadastro
-{
-  "email": "teste@email.com",
-  "nome": "Teste",
-  "senha": "12345678",
-  "cargo": 1
-}

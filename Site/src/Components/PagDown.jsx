@@ -20,7 +20,7 @@ const PagDown = () => {
       link.click();
       document.body.removeChild(link);
       setIsDownloading(false);
-    }, 2000);
+    }, 1000);
   };
 
   return (
