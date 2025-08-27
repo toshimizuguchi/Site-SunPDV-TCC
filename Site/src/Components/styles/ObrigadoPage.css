@@ -1,14 +1,5 @@
 /* ObrigadoPage.css */
-/* ===== VARIÁVEIS DE CORES ===== */
-:root {
-  --primary: #006989; /* Azul similar à cor do céu */
-  --primary-dark: #0c5b74;
-  --secondary: #1c414d; /* Laranja similar à cor do sol */
-  --dark: #2D3748;
-  --light: #f8f9fa;
-  --gray: #006989;
-  --text: #2D3748;
-}
+
   
   /* ===== ESTILOS DA PÁGINA ===== */
   .thank-you-section {
@@ -25,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient( #c0ecfa, #006989);
+  background-color: var(--navbar-bg);
 }
 
 .logo {

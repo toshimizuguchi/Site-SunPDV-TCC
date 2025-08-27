@@ -1,13 +1,4 @@
-/*  Cores usadas no Projeto  */
-:root {
-  --primary: #006989; /* Azul similar à cor do céu */
-  --primary-dark: #0c5b74;
-  --secondary: #1c414d; /* Laranja similar à cor do sol */
-  --dark: #2D3748;
-  --light: #006989;
-  --light: #f8f9fa;
-  --text: #2D3748;
-}
+
 
 /*  Estilização da PagDown  */
 .download-btn {
@@ -54,7 +45,7 @@
 }
 
 .system-requirements {
-  background-color: white;
+  background-color: var(--background);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;

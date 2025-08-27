@@ -34,7 +34,7 @@ const DpsInstall = () => {
             <div className="checkmark">✓</div>
             <h1 className="title">Obrigado por baixar nosso sistema!</h1>
             <p className="subtitle">
-              Agora, siga os passos abaixo para se cadastrar e começar a usar o Sun PDV.
+              Agora, siga os passos abaixo para começar a usar o Sun PDV.
             </p>
             
             <div className="steps-container">
@@ -50,7 +50,7 @@ const DpsInstall = () => {
                 <div className="step-number">2</div>
                 <div className="step-content">
                   <h3>Complete seu cadastro</h3>
-                  <p>Registre-se para ativar sua licença</p>
+                  <p>Registre-se no Sistema</p>
                 </div>
               </div>
               
@@ -63,12 +63,7 @@ const DpsInstall = () => {
               </div>
             </div>
 
-            <button 
-              className="register-btn" 
-              onClick={() => navigate('/cadastro')}
-            >
-              Cadastre-se Agora
-            </button>
+            
 
             <p className="support-text">
               Precisa de ajuda? <Link to="https://wa.me/12997703313" className="support-link">Fale com nosso suporte</Link>

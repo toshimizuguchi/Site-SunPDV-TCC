@@ -30,15 +30,6 @@ const LicensePage = () => {
             </ul>
           </div>
 
-          <div className="policy-section">
-            <h2>2. Ativação da Licença</h2>
-            <p>Sua licença será ativada após a confirmação do pagamento. Você receberá por e-mail:</p>
-            <ul>
-              <li>Chave de ativação</li>
-              <li>Instruções para registro</li>
-              <li>Comprovante de licença</li>
-            </ul>
-          </div>
 
           <div className="last-updated">
             <p>Última atualização: {new Date().toLocaleDateString()}</p>

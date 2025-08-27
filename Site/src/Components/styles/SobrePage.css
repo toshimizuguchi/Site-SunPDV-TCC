@@ -1,14 +1,6 @@
 
 /*  Cores usadas no Projeto */
-:root {
-  --primary: #bae6f3; /* Azul similar à cor do céu */
-  --primary-dark: #0c5b74;
-  --secondary: #1c414d; /* Laranja similar à cor do sol */
-  --dark: #2D3748;
-  --light: #006989;
-  --gray: #e7dbdb;
-  --text: #2D3748;
-}
+
   
   /* Estilização da PagSobr*/
   .hero-section {
@@ -32,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to left, #c0ecfa, #006989);
+  background-color: var(--navbar-bg);
     
 }
 
