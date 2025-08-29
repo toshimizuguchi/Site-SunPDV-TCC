@@ -14,9 +14,9 @@ const DpsInstall = () => {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="/logo2.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
-            Sun<span>PDV</span>
+           
           </div>
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>

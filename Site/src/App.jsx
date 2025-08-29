@@ -10,9 +10,9 @@ function App() {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="./public/logo2.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
-            Sun<span>PDV</span>
+            
           </div>
           <nav className="nav-links">
             <Link to="/" className="nav-link active">Home</Link>
@@ -43,11 +43,15 @@ function App() {
         </section>
 
         {/* Features Section */}
-        <section>
-          <div className="section-title">
-            <h2>Por que escolher o Sun PDV?</h2>
-            <p>Conheça as vantagens do nosso sistema de gestão de vendas</p>
-          </div>
+        <section className="features-section" style={{height: '300px'}}>
+            <div className="section-title-container">
+              <div className="section-title">
+                  <h2>Por que escolher o Sun PDV?</h2>
+                    <p>Conheça as vantagens do nosso sistema de gestão de vendas</p>
+              </div>
+                </div>
+
+
 
           <div className="features-grid">
             <div className="feature-card">
