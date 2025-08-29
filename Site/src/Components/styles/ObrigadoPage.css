@@ -19,53 +19,14 @@ body, html {
 .header {
   background-color: var(--fundo-navbar);
   color: var(--texto-claro);
-  padding: 1rem 2rem;
-  box-shadow: var(--sombra-leve);
+  padding: 0.3rem 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
-}
-
-.nav-container {
+  height: 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-
-
-.sun-logo {
-  height: 100px;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-link {
-  color: var(--texto-claro);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -3px;
-  left: 0;
-  background-color: var(--cor-secundaria);
-  transition: width 0.3s;
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-  width: 100%;
+  justify-content: space-between;
 }
 
 /* ===== Thank You Section ===== */
@@ -104,23 +65,29 @@ body, html {
   color: var(--texto-secundario);
 }
 
+/* Ajuste do alinhamento dos passos */
 .steps-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
+  align-items: center; /* Alinha todos os passos ao centro */
+  justify-content: center;
 }
 
 .step {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center; /* Alinha o número e o conteúdo na horizontal */
+  justify-content: center; /* Alinha os itens centralizados */
+  text-align: center; /* Centraliza o conteúdo textual */
+  width: 100%; /* Garante que a largura ocupe toda a seção */
 }
 
 .step-number {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cor-primaria);
+  color: var(--texto-claro);
   background-color: var(--cor-primaria-clara);
   width: 50px;
   height: 50px;
@@ -128,6 +95,12 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .step-content h3 {
@@ -141,6 +114,7 @@ body, html {
   color: var(--texto-secundario);
 }
 
+/* ===== Support Link ===== */
 .support-text {
   font-size: 1rem;
   margin-top: 1rem;
@@ -160,34 +134,46 @@ body, html {
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
-  padding: 4rem 2rem 2rem;
-  border-top: 4px solid var(--cor-primaria-clara);
+  padding: 1rem 1.5rem;
+  border-top: 2px solid var(--cor-primaria-clara);
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-column {
-  flex: 1 1 200px;
+  flex: 1 1 180px;
 }
 
 .footer-column h3 {
   color: var(--cor-secundaria-clara);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
 }
 
+.footer-column p,
 .footer-links li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.75rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links a {
   color: var(--texto-claro);
   text-decoration: none;
+  font-size: 0.75rem;
   transition: color 0.3s;
 }
 
@@ -197,14 +183,20 @@ body, html {
 
 .copyright {
   text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
   color: var(--texto-secundario);
 }
 
 /* ===== Animations ===== */
-@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {
@@ -226,5 +218,13 @@ body, html {
     width: 60px;
     height: 60px;
     font-size: 1.8rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
   }
 }

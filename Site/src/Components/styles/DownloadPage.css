@@ -16,42 +16,48 @@ body, html {
 }
 
 /* ===== Header ===== */
+/* ===== Header Super Compacto ===== */
 .header {
   background-color: var(--fundo-navbar);
   color: var(--texto-claro);
-  padding: 1rem 2rem;
+  padding: 0.3rem 1rem; /* Menor padding */
   box-shadow: var(--sombra-leve);
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background-color 0.3s;
+  height: 50px; /* Navbar bem baixa */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.header:hover {
-  background-color: var(--cor-primaria-escura);
-}
-
+/* Container para o conteúdo da nav */
 .nav-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo ajustada */
 .sun-logo {
-  height: 100px;
+  height: 30px; /* Logo compacta */
+  width: auto; /* Garante que a imagem seja proporcional */
   margin-right: 0.5rem;
-  vertical-align: middle;
 }
 
+/* Links bem compactos */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* Menos espaçamento entre os links */
 }
 
 .nav-link {
   color: var(--texto-claro);
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.8rem; /* Fonte menor */
+  padding: 0.2rem 0;
   position: relative;
   transition: color 0.3s;
 }
@@ -61,66 +67,48 @@ body, html {
   position: absolute;
   width: 0%;
   height: 2px;
-  bottom: -3px;
+  bottom: -2px;
   left: 0;
   background-color: var(--cor-secundaria);
   transition: width 0.3s;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
+
 /* ===== Hero ===== */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  display: flex; /* Flexbox para alinhar lado a lado */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em telas pequenas */
+  align-items: center; /* Alinha os itens no centro verticalmente */
+  justify-content: space-between; /* Coloca a imagem e o texto nas extremidades */
+  gap: 2rem; /* Espaçamento entre o texto e a imagem */
   padding: 4rem 2rem;
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
-  border-radius: 16px;
   margin-bottom: 4rem;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-content h1 span:first-child {
-  color: var(--cor-secundaria-clara);
-}
-
-.hero-content h1 span:last-child {
-  color: var(--cor-destaque);
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  flex: 1; /* Deixa o conteúdo do texto ocupar o restante do espaço */
+  max-width: 600px; /* Limita a largura do texto */
 }
 
 .hero-image img {
-  width: 100%;
-  border-radius: 20px;
+  width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
+  max-width: 500px; /* Limita o tamanho máximo da imagem */
   box-shadow: var(--sombra-forte);
-  object-fit: cover;
+  object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
   animation: fadeIn 1s ease forwards;
 }
 
+
 /* ===== Botões ===== */
 .download-btn {
+  
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -230,34 +218,47 @@ body, html {
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
-  padding: 3rem 1rem 1rem;
-  border-top: 3px solid var(--cor-primaria-clara);
+  padding: 1rem 1.5rem; /* Padding reduzido ainda mais */
+  border-top: 2px solid var(--cor-primaria-clara);
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: nowrap; /* Não permite quebra de linha */
   justify-content: space-between;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 1.5rem; /* Reduz o espaçamento entre as colunas */
+  max-width: 1200px; /* Limita a largura total */
+  margin: 0 auto;
 }
 
 .footer-column {
-  flex: 1 1 100px;
+  flex: 1 1 180px; /* Colunas um pouco menores */
+  min-width: 160px; /* Garante que não fiquem muito largas */
 }
 
 .footer-column h3 {
   color: var(--cor-secundaria-clara);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.4rem; /* Menos espaçamento */
+  font-size: 1rem;
 }
 
+.footer-column p,
 .footer-links li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.75rem; /* Texto ainda menor */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links a {
   color: var(--texto-claro);
   text-decoration: none;
+  font-size: 0.75rem;
   transition: color 0.3s;
 }
 
@@ -267,10 +268,14 @@ body, html {
 
 .copyright {
   text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.7rem; /* Texto ainda menor */
   color: var(--texto-secundario);
 }
+
+
+
 
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {

@@ -5,12 +5,13 @@ import { Link, useNavigate } from 'react-router-dom'; //navegar de forma mais ra
 function App() {
   return (
     <div className="app-container">
+      
       {/* Header */}
       <header className="header">
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="./public/logo2.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="./public/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
             
           </div>
@@ -37,12 +38,13 @@ function App() {
           <div className="hero-image">
             {/* Aqui viria uma imagem */}
             <div class="img-tela">
-            <img src="./public/tela-login.png" alt="Logo tela login"></img>
+            <img src="./public/telalog.png" alt="Logo tela login"></img>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
+
         <section className="features-section" style={{height: '300px'}}>
             <div className="section-title-container">
               <div className="section-title">

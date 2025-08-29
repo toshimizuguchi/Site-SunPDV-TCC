@@ -30,7 +30,7 @@ const PagDown = () => {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="./public/logo2.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="./public/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
            
           </div>
@@ -82,7 +82,7 @@ const PagDown = () => {
 
           <div className="hero-image">
             <img 
-              src="/imagens/sunpdv-screenshot.png" 
+              src="./public/telafunc.png" 
               alt="Sun PDV em funcionamento" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
@@ -125,7 +125,7 @@ const PagDown = () => {
           <div className="features-grid">
             <div className="feature-card">
               <h3>O Sun PDV é gratuito?</h3>
-              <p>Oferecemos um período de teste gratuito de 30 dias. Após esse período, é necessário adquirir uma licença.</p>
+              <p>Sim, é de uso gratuito e não precisa de licença</p>
             </div>
 
             <div className="feature-card">
@@ -135,7 +135,7 @@ const PagDown = () => {
 
             <div className="feature-card">
               <h3>Posso instalar em mais de um computador?</h3>
-              <p>Cada computador precisa de uma licença individual. Oferecemos pacotes para múltiplas licenças com desconto.</p>
+              <p>SIm. Oferecemos múltiplas interações.</p>
             </div>
           </div>
         </section>
