@@ -30,7 +30,7 @@ const PagDown = () => {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="./public/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
            
           </div>
@@ -82,7 +82,7 @@ const PagDown = () => {
 
           <div className="hero-image">
             <img 
-              src="./public/telafunc.png" 
+              src="/telafunc.png" 
               alt="Sun PDV em funcionamento" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />

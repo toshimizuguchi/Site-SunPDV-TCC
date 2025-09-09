@@ -11,7 +11,7 @@ function App() {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="./public/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
             
           </div>
@@ -38,7 +38,7 @@ function App() {
           <div className="hero-image">
             {/* Aqui viria uma imagem */}
             <div class="img-tela">
-            <img src="./public/telalog.png" alt="Logo tela login"></img>
+            <img src="/telalog.png" alt="Logo tela login"></img>
             </div>
           </div>
         </section>

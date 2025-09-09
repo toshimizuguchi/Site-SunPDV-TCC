@@ -1,5 +1,5 @@
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; //navegação entre rotas de forma mais rapida e eficiente
 import './styles/ObrigadoPage.css';
 
 const DpsInstall = () => {
@@ -14,7 +14,7 @@ const DpsInstall = () => {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="./public/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
            
           </div>
