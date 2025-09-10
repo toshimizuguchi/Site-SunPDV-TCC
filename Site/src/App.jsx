@@ -45,7 +45,7 @@ function App() {
 
         {/* Features Section */}
 
-        <section className="features-section" style={{height: '300px'}}>
+        <section className="features-section" style={{height: '400px'}}>
             <div className="section-title-container">
               <div className="section-title">
                   <h2>Por que escolher o Sun PDV?</h2>

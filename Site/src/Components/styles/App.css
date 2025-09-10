@@ -249,13 +249,13 @@ body, html {
   border-radius: 20px;
   box-shadow: var(--sombra-forte);
   object-fit: cover;
-  animation: fadeIn 1s ease forwards;
+  animation: fadeIn 5s ease forwards;
 }
 
 /* ===== Features Section ===== */
 .features-section {
-  margin-top: -4rem; /* Adiciona um pequeno valor negativo para empurrar a seção para cima */
-  padding-top: 2rem; /* Se você precisar de algum padding interno na parte superior */
+  margin-top: 1rem; /* Adiciona um pequeno valor negativo para empurrar a seção para cima */
+  padding-top: 10rem; /* Se você precisar de algum padding interno na parte superior */
 }
 
 .features-grid {
@@ -333,7 +333,7 @@ body, html {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
   padding: 1rem 2rem; /* Reduzido para um padding menor */
-  border-top: 2px solid var(--cor-primaria-clara);
+  border-top: 10px solid var(--cor-primaria-clara);
 }
 
 .footer-content {
@@ -342,7 +342,7 @@ body, html {
   justify-content: space-between;
   align-items: flex-start; /* Alinhamento no topo */
   gap: 1.5rem; /* Menos espaço entre as colunas */
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
