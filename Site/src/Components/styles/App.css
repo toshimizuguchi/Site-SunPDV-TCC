@@ -124,8 +124,8 @@ body, html {
   width: 100%;
 }
 
-/* ===== Hero ===== */
-/* ===== Hero Section ===== */
+/*  Hero  */
+/*  Hero Section  */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -136,13 +136,13 @@ body, html {
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
   margin-bottom: 4rem;
-  box-shadow: none; /* Remover a sombra */
-  border: none; /* Garantir que não haja borda visível */
-  width: 100%; /* Garante que a hero section ocupe toda a largura */
+  box-shadow: none; 
+  border: none; 
+  width: 100%; 
 }
 
 /* Ajuste da hero-content dentro da hero-section */
-/* ===== Hero ===== */
+/*  Hero */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -153,17 +153,17 @@ body, html {
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
   margin-bottom: 4rem;
-  box-shadow: none; /* Remover a sombra */
-  border: none; /* Garantir que não haja borda visível */
-  width: 100%; /* Garante que a hero section ocupe toda a largura */
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  box-shadow: none; 
+  border: none; 
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 /* Ajuste da hero-content dentro da hero-section */
 .hero-content {
   flex: 1;
-  max-width: 600px; /* Largura máxima do conteúdo */
-  margin: 0; /* Garantir que não haja margem no conteúdo */
+  max-width: 600px; 
+  margin: 0; 
 }
 
 .hero-content h1 {
