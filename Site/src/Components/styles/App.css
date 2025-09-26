@@ -261,6 +261,7 @@ body, html {
 
 /* ===== Features Section ===== */
 .features-section {
+  
   background-color: var(--fundo-site);
   margin-top: 1rem; /* Adiciona um pequeno valor negativo para empurrar a seção para cima */
   padding-top: 10rem; /* Se você precisar de algum padding interno na parte superior */
@@ -271,26 +272,20 @@ body, html {
   flex-wrap: wrap;
   gap: 1.5rem; /* Menor espaçamento entre os cards */
   justify-content: center;
-  margin-top: 2rem;
-}
-
-.feature-card {
-  background-color: var(--fundo-card);
-  padding: 1.2rem; /* Menos padding no geral */
-  padding-bottom: 0.8rem; /* Menor padding na parte inferior */
-  border-radius: 16px;
-  box-shadow: var(--sombra-media);
-  text-align: center;
-  flex: 1 1 120px;
-  max-width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 }
 
 
-.feature-card:hover {
-  transform: translateY(3px);
-  box-shadow: var(--sombra-forte);
+
+
+
+
+#cartoes{
+  width: 100%;
+  height:150px;
+  min-height: 100px;
+  padding: 20px;
+  margin-top: 80px;
 }
 
 #cartoes:hover {
@@ -301,8 +296,8 @@ body, html {
 }
 
 .feature-icon {
-  font-size: 1rem; /* Ícones menores */
-  margin-bottom: 1rem;
+  font-size: 2rem; /* Ícones menores */
+  margin-bottom: 2rem;
 }
 
 .feature-card h3 {

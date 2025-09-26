@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./styles/DownloadPage.css"; //Estilização da pagina
+import { useNavigate, Link } from "react-router-dom";
+import "./styles/DownloadPage.css"; // Estilização da página
 
 const PagDown = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -15,7 +14,7 @@ const PagDown = () => {
       const fileUrl = "/arquivos/pagdown.zip";
       const link = document.createElement("a");
       link.href = fileUrl;
-      link.download = "pagdown.zip"; /* exemplo para teste */
+      link.download = "pagdown.zip"; // Exemplo para teste
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -32,13 +31,11 @@ const PagDown = () => {
             <div className="logo-sunpdv">
               <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
-           
           </div>
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/Sobre-Nos" className="nav-link">Sobre Nós</Link>
             <Link to="/Download" className="nav-link active">Download</Link>
-            
           </nav>
         </div>
       </header>
@@ -47,16 +44,16 @@ const PagDown = () => {
       <main className="main-content">
         <div className="hero">
           <div className="hero-content">
-          <h1 className="title">
-            Baixe o{' '}
-            <span style={{ color: 'var(--primary)' }}>Sun</span>
-            <span style={{ color: 'var(--secondary)' }}>PDV</span>
+            <h1 className="title">
+              Baixe o{' '}
+              <span style={{ color: 'var(--primary)' }}>Sun</span>
+              <span style={{ color: 'var(--secondary)' }}>PDV</span>
             </h1>
             <p>
               O sistema completo para gestão de vendas e controle do seu negócio. 
               Rápido, eficiente e fácil de usar.
             </p>
-            
+
             <div className="system-requirements">
               <h2 className="section-title">Requisitos do Sistema</h2>
               <ul className="requirements-list">
@@ -135,25 +132,10 @@ const PagDown = () => {
 
             <div className="feature-card">
               <h3>Posso instalar em mais de um computador?</h3>
-              <p>SIm. Oferecemos múltiplas interações.</p>
+              <p>Sim. Oferecemos múltiplas interações.</p>
             </div>
           </div>
         </section>
-
-        <div className="cta-section">
-          <h2>Pronto para revolucionar seu negócio?</h2>
-          <button 
-            className={`download-btn ${isDownloading ? "loading" : ""}`} 
-            onClick={handleDownload}
-            disabled={isDownloading}
-          >
-            {isDownloading ? (
-              <div className="loading-spinner"></div>
-            ) : (
-              <>📥 Baixar Agora</>
-            )}
-          </button>
-        </div>
       </main>
 
       {/* Rodapé */}
@@ -172,7 +154,6 @@ const PagDown = () => {
             <h3>Suporte</h3>
             <ul className="footer-links">
               <li><Link to="/contato">Contato</Link></li>
-             
             </ul>
           </div>
 
