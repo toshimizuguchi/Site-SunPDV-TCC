@@ -15,7 +15,7 @@ const PagDown = () => {
       const fileUrl = "/arquivos/pagdown.zip";
       const link = document.createElement("a");
       link.href = fileUrl;
-      link.download = "pagdown.zip";
+      link.download = "pagdown.zip"; /* exemplo para teste */
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

@@ -1,5 +1,5 @@
 :root { 
-  /* ===== 🎯 Identidade visual ===== */ 
+  /* Cores Semelhando o Sistema SunPDV com uma visualização unica */ 
 
   --cor-primaria: #006989; /* Azul principal */ 
   --cor-primaria-escura:#05313e; 
@@ -9,7 +9,7 @@
   --cor-secundaria-clara: #eec341; 
   --cor-destaque: #FF7F50; /* Coral para destaque */ 
 
-  /* ===== 🌍 Estrutura do site ===== */ 
+  /* cores dos fundos do site */ 
 
   --fundo-site: #f5f7fa; /* Fundo geral */ 
   --fundo-alternativo: #c3cfe2; /* Fundo alternativo */ 
@@ -18,36 +18,30 @@
   --fundo-rodape: #1a2a3a; /* Rodapé */ 
   --fundo-navbar: #00536d; /* Barra de navegação */ 
 
-  /* ===== ✍️ Tipografia ===== */ 
+  /* Cores do texto */ 
 
   --texto-principal: #2a2a2a; /* Texto padrão */ 
   --texto-secundario: #a9cce3; /* Texto auxiliar */ 
   --texto-claro: #ffffff; /* Texto sobre fundo escuro */ 
   --texto-escuro: #000000; /* 
 
-  /* ===== ✅ Estados e mensagens ===== */ 
-
-  --sucesso: #2ecc71; 
-  --aviso: #f39c12; 
-  --erro: #d32f2f; 
-  --erro-claro: #f44336; 
-  --informacao: #0288d1; 
+  
         
-  /* ===== 🎨 Elementos neutros ===== */ 
+  /* Elementos escuros*/ 
 
   --borda: #d3d3d3; 
   --cinza-claro: #f8f8f8; 
   --cinza: #e2e8f0; 
   --cinza-escuro: #2d3748; 
 
-  /* ===== 🖼️ Sombras & efeitos ===== */ 
+  /*  🖼️ Sombras & efeito */ 
 
   --sombra-leve: 0px 2px 6px rgba(0, 0, 0, 0.1); 
   --sombra-media: 0px 4px 10px rgba(0, 0, 0, 0.15); 
   --sombra-forte: 0px 6px 15px rgba(0, 0, 0, 0.2); 
 }
 
-/* ===== Global ===== */
+/*  Global */
 body, html {
   margin: 0;
   padding: 0;
@@ -57,7 +51,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* ===== App Container ===== */
+/*  App Container  */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -68,8 +62,7 @@ body, html {
   flex:1;
 }
 
-/* ===== Header ===== */
-/* ===== Header Super Compacto ===== */
+/*Header*/
 .header {
   background-color: var(--fundo-navbar);
   color: var(--texto-claro);
@@ -131,8 +124,8 @@ body, html {
   width: 100%;
 }
 
-/* ===== Hero ===== */
-/* ===== Hero Section ===== */
+/*  Hero  */
+/*  Hero Section  */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -143,13 +136,13 @@ body, html {
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
   margin-bottom: 4rem;
-  box-shadow: none; /* Remover a sombra */
-  border: none; /* Garantir que não haja borda visível */
-  width: 100%; /* Garante que a hero section ocupe toda a largura */
+  box-shadow: none; 
+  border: none; 
+  width: 100%; 
 }
 
 /* Ajuste da hero-content dentro da hero-section */
-/* ===== Hero ===== */
+/*  Hero */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -160,17 +153,17 @@ body, html {
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
   margin-bottom: 4rem;
-  box-shadow: none; /* Remover a sombra */
-  border: none; /* Garantir que não haja borda visível */
-  width: 100%; /* Garante que a hero section ocupe toda a largura */
-  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  box-shadow: none; 
+  border: none; 
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 /* Ajuste da hero-content dentro da hero-section */
 .hero-content {
   flex: 1;
-  max-width: 600px; /* Largura máxima do conteúdo */
-  margin: 0; /* Garantir que não haja margem no conteúdo */
+  max-width: 600px; 
+  margin: 0; 
 }
 
 .hero-content h1 {
@@ -388,7 +381,7 @@ body, html {
 
 
 
-/* Responsividade para telas menores */
+/* Responsividade para celular, tablets  */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -397,7 +390,7 @@ body, html {
   }
   
   .footer-column {
-    text-align: left !important; /* alinha tudo à esquerda no mobile */
+    text-align: left !important; /* alinhamento para a esquerda em celulares*/
   }
   
   .copyright {
@@ -405,17 +398,8 @@ body, html {
   }
 }
 
-/* ===== Animations ===== */
-@keyframes fadeInUp {  
-  0% { opacity: 0; transform: translateY(30px); }  
-  100% { opacity: 1; transform: translateY(0); } 
-}
-@keyframes fadeIn { 
-  0% { opacity: 0; } 
-  100% { opacity: 1; } 
-}
 
-/* ===== Responsividade ===== */
+/* Responsividade do site */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -432,3 +416,13 @@ body, html {
     gap: 1rem;
   }
 }
+/*  Aimações para os cards  */
+@keyframes fadeInUp {  
+  0% { opacity: 0; transform: translateY(30px); }  
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes fadeIn { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; } 
+}
+
