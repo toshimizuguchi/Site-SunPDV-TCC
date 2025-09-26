@@ -1,24 +1,30 @@
-import { Link, useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
+import React from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import './styles/SobrePage.css'; // Estilização da pagina 
 
 const PagSobr = () => {
+  // Hook para detectar quando a seção está visível
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   return (
     <div className="app-container">
       {/* Navbar */}
       <header className="header">
         <div className="nav-container">
           <div className="logo">
-              <div className="logo-sunpdv">
-                <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
-              </div>
-            
+            <div className="logo-sunpdv">
+              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
+            </div>
           </div>
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/Sobre-Nos" className="nav-link active">Sobre Nós</Link>
             <Link to="/Download" className="nav-link">Download</Link>
-            
-           
           </nav>
         </div>
       </header>
@@ -27,15 +33,16 @@ const PagSobr = () => {
       <main className="main-content">
         <section className="hero-section">
           <div className="hero-content">
-          <h1 className="title">
-            Sobre o{' '}
-            <span style={{ color: 'var(--primary)' }}>Sun</span>
-            <span style={{ color: 'var(--secondary)' }}>PDV</span>
+            <h1 className="title">
+              Sobre o{' '}
+              <span style={{ color: 'var(--primary)' }}>Sun</span>
+              <span style={{ color: 'var(--secondary)' }}>PDV</span>
             </h1>
             <p className="description">
               Nosso sistema é conhecido por ser único e otimizado para o cenário Varejista,
               oferecendo soluções completas para gestão de vendas e controle do seu negócio.
             </p>
+            <img className="telavendas" src="./public/telavendas.png"></img>
           </div>
         </section>
 
@@ -66,7 +73,8 @@ const PagSobr = () => {
           </div>
         </section>
 
-        <section className="history-section">
+        {/* Seção com contador animado */}
+        <section className="history-section" ref={ref}>
           <div className="section-title">
             <h2>Nossa <span>História</span></h2>
           </div>
@@ -78,7 +86,19 @@ const PagSobr = () => {
             </p>
             <div className="stats-grid">
               <div className="stat-item">
-                <h3>500+</h3>
+                <div className="numerosobe">
+                  <CountUp
+                    start={0}
+                    end={inView ? 1000000 : 0}
+                    duration={3}
+                    separator="."
+                    redraw={true}
+                  >
+                    {({ countUpRef }) => (
+                      <h3 className="numeroini" ref={countUpRef}></h3>
+                    )}
+                  </CountUp>
+                </div>
                 <p>Clientes satisfeitos</p>
               </div>
               <div className="stat-item">
@@ -100,16 +120,15 @@ const PagSobr = () => {
           </div>
           <div className="team-grid">
             <div className="team-card">
-            <div className="team-avatar">👨‍💻</div>
+              <div className="team-avatar">👨‍💻</div>
               <h3>João Pedro de Moraes Mendes</h3>
               <p>Co-Fundador e Desenvolvedor de Software</p>
             </div>
-             <div className="team-card"> 
+            <div className="team-card"> 
               <div className="team-avatar">👨‍💼</div>
               <h3>João Pedro Silva Schinato</h3>
               <p>Fundador e Data Engineer</p>
             </div>
-          
             <div className="team-card">
               <div className="team-avatar">👨‍💻</div>
               <h3>Vinicius Toshi Mizuguchi</h3>

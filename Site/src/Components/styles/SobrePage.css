@@ -15,7 +15,7 @@ body, html {
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
+/* Header  v */
 /* ===== Header Super Compacto ===== */
 .header {
   background-color: var(--fundo-navbar);
@@ -170,10 +170,16 @@ body, html {
   color: var(--cor-primaria);
   margin-bottom: 0.5rem;
 }
+.numeroini{
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
 
 .stat-item p {
   color: var(--cor-primaria);
 }
+
 
 /* ===== Team Section ===== */
 .team-section {
@@ -282,7 +288,16 @@ body, html {
 /* ===== Animations ===== */
 @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
-
+@keyframes subirNumero {
+  0% {
+    transform: translateY(0); /* Posição inicial */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px); /* Mova para cima */
+    opacity: 0; /* Desvanece */
+  }
+}
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {
   .features-grid, .stats-grid, .team-grid {
