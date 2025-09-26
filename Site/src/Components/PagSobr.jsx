@@ -28,23 +28,27 @@ const PagSobr = () => {
           </nav>
         </div>
       </header>
-
-      {/* Conteúdo Principal */}
-      <main className="main-content">
-        <section className="hero-section">
-          <div className="hero-content">
-            <h1 className="title">
-              Sobre o{' '}
-              <span style={{ color: 'var(--primary)' }}>Sun</span>
-              <span style={{ color: 'var(--secondary)' }}>PDV</span>
-            </h1>
-            <p className="description">
-              Nosso sistema é conhecido por ser único e otimizado para o cenário Varejista,
-              oferecendo soluções completas para gestão de vendas e controle do seu negócio.
-            </p>
-            <img className="telavendas" src="./public/telavendas.png"></img>
+              {/* Conteúdo Principal */}
+              <main className="main-content">
+                <section className="hero-section">
+          <div className="hero-inner">
+            <div className="hero-content">
+              <h1 className="title">
+                Sobre o{' '}
+                <span style={{ color: 'var(--primary)' }}>Sun</span>
+                <span style={{ color: 'var(--secondary)' }}>PDV</span>
+              </h1>
+              <p className="description">
+                Nosso sistema é conhecido por ser único e otimizado para o cenário Varejista,
+                oferecendo soluções completas para gestão de vendas e controle do seu negócio.
+              </p>
+            </div>
+            <div className="image">
+              <img src="/telavendas.png" alt="Imagem de vendas" />
+            </div>
           </div>
         </section>
+
 
         <section className="features-section">
           <div className="section-title">
