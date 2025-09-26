@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app-container">
       
-      {/* Header */}
+      
       <header className="header">
         <div className="nav-container">
           <div className="logo">
@@ -25,6 +25,7 @@ function App() {
 
       {/* Main Content */}
       <main className="main-content">
+        
         {/* Hero Section */}
         <section className="hero">
           <div className="hero-content">
@@ -36,7 +37,6 @@ function App() {
             <Link to="/Download" className="btn-primary">Baixar Agora</Link>
           </div>
           <div className="hero-image">
-            {/* Aqui viria uma imagem */}
             <div class="img-tela">
             <img src="/telalog.png" alt="Logo tela login"></img>
             </div>
