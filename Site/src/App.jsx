@@ -24,7 +24,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="main-content">
+      <main className="main-content" id="fundo">
         
         {/* Hero Section */}
         <section className="hero">
@@ -47,8 +47,8 @@ function App() {
 
         <section className="features-section" style={{height: '500px'}}>
             <div className="section-title-container">
-              <div className="section-title">
-                  <h2>Por que escolher o Sun PDV?</h2>
+              <div className="section-title" id="titulo">
+                  <h2>Por que escolher o <span id="cor2">Sun PDV</span> ?</h2>
                     <p>Conheça as vantagens do nosso sistema de gestão de vendas</p>
               </div>
                 </div>
@@ -56,13 +56,13 @@ function App() {
 
 
           <div className="features-grid">
-            <div className="feature-card">
+            <div className="feature-card" id="cartoes">
               <div className="feature-icon">🚀</div>
               <h3>Rápido e Eficiente</h3>
               <p>Processamento ágil de vendas mesmo com grande movimento</p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card" id="cartoes">
               <div className="feature-icon">💻</div>
               <h3>Multiplataforma</h3>
               <p>Funciona em Windows e Linux sem problemas de compatibilidade</p>

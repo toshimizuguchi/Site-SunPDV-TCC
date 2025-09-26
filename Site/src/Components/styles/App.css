@@ -62,6 +62,10 @@ body, html {
   flex:1;
 }
 
+#fundo {
+  background-color: var(--fundo-site);
+}
+
 /*Header*/
 .header {
   background-color: var(--fundo-navbar);
@@ -203,6 +207,16 @@ body, html {
   display: block; /* Remove qualquer espaço indesejado abaixo da imagem */
 }
 
+#titulo h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: #000000 0 0 10px;
+}
+
+#cor2 {
+  color: var(--cor-destaque);
+  text-shadow: #391c02 0 0 10px;
+}
+
 /* ===== Responsividade para telas pequenas ===== */
 @media (max-width: 768px) {
   .hero {
@@ -247,6 +261,7 @@ body, html {
 
 /* ===== Features Section ===== */
 .features-section {
+  background-color: var(--fundo-site);
   margin-top: 1rem; /* Adiciona um pequeno valor negativo para empurrar a seção para cima */
   padding-top: 10rem; /* Se você precisar de algum padding interno na parte superior */
 }
@@ -276,6 +291,13 @@ body, html {
 .feature-card:hover {
   transform: translateY(3px);
   box-shadow: var(--sombra-forte);
+}
+
+#cartoes:hover {
+  background-color: #fff1ebd5;
+  transform: scale(1.05);
+  transition: 0.8s;
+  box-shadow: var(--cor-destaque) 0 0 10px;
 }
 
 .feature-icon {
