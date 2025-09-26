@@ -1,4 +1,4 @@
-import './styles/PolicyPages.css';
+import './styles/LicensePage.css';
 
 const LicensePage = () => {
   return (

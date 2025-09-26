@@ -38,7 +38,7 @@ function App() {
           </div>
           <div className="hero-image">
             <div class="img-tela">
-            <img src="/telalog.png" alt="Logo tela login"></img>
+            <img src="/Tela_de_cadastro.png" alt="Logo tela login"></img>
             </div>
           </div>
         </section>
