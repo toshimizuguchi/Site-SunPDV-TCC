@@ -15,7 +15,7 @@ body, html {
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
+/* Header  v */
 /* ===== Header Super Compacto ===== */
 .header {
   background-color: var(--fundo-navbar);
@@ -80,32 +80,50 @@ body, html {
 
 
 /* ===== Hero Section ===== */
-.hero-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
-  color: var(--texto-claro);
-  margin-bottom: 4rem;
+.hero-section{
+    background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
+    color: var(--texto-claro);
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Para quebrar em telas menores */
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.hero-content {
+  flex: 1 1 400px;
+  text-align: left;
 }
 
-.hero-content h1 span:first-child {
-  color: var(--cor-secundaria-clara);
+.image {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-content h1 span:last-child {
-  color: var(--cor-destaque);
+.image img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  animation: fadeIn 1s ease forwards;
 }
 
-.hero-content p.description {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-top: 1rem;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
 }
 
 /* ===== Features Section ===== */
@@ -170,10 +188,16 @@ body, html {
   color: var(--cor-primaria);
   margin-bottom: 0.5rem;
 }
+.numeroini{
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
 
 .stat-item p {
   color: var(--cor-primaria);
 }
+
 
 /* ===== Team Section ===== */
 .team-section {
@@ -282,7 +306,16 @@ body, html {
 /* ===== Animations ===== */
 @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
-
+@keyframes subirNumero {
+  0% {
+    transform: translateY(0); /* Posição inicial */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px); /* Mova para cima */
+    opacity: 0; /* Desvanece */
+  }
+}
 /* ===== Responsividade ===== */
 @media (max-width: 768px) {
   .features-grid, .stats-grid, .team-grid {
