@@ -1,0 +1,445 @@
+:root { 
+  /* Cores Semelhando o Sistema SunPDV com uma visualização unica */ 
+
+  --cor-primaria: #006989; /* Azul principal */ 
+  --cor-primaria-escura:#05313e; 
+  --cor-primaria-clara: #0c5b74; 
+  --cor-secundaria: #c09727; /* Dourado */ 
+  --cor-secundaria-escura:#e8b923; 
+  --cor-secundaria-clara: #eec341; 
+  --cor-destaque: #FF7F50; /* Coral para destaque */ 
+
+  /* cores dos fundos do site */ 
+
+  --fundo-site: #f5f7fa; /* Fundo geral */ 
+  --fundo-alternativo: #c3cfe2; /* Fundo alternativo */ 
+  --fundo-painel: #2a3f54; /* Painéis / sidebar */ 
+  --fundo-card: #ffffff; /* Cards e containers */ 
+  --fundo-rodape: #1a2a3a; /* Rodapé */ 
+  --fundo-navbar: #00536d; /* Barra de navegação */ 
+
+  /* Cores do texto */ 
+
+  --texto-principal: #2a2a2a; /* Texto padrão */ 
+  --texto-secundario: #a9cce3; /* Texto auxiliar */ 
+  --texto-claro: #ffffff; /* Texto sobre fundo escuro */ 
+  --texto-escuro: #000000; /* 
+
+  
+        
+  /* Elementos escuros*/ 
+
+  --borda: #d3d3d3; 
+  --cinza-claro: #f8f8f8; 
+  --cinza: #e2e8f0; 
+  --cinza-escuro: #2d3748; 
+
+  /*  🖼️ Sombras & efeito */ 
+
+  --sombra-leve: 0px 2px 6px rgba(0, 0, 0, 0.1); 
+  --sombra-media: 0px 4px 10px rgba(0, 0, 0, 0.15); 
+  --sombra-forte: 0px 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/*  Global */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--fundo-site);
+  color: var(--texto-principal);
+  scroll-behavior: smooth;
+}
+
+/*  App Container  */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main{
+  flex:1;
+}
+
+#fundo {
+  background-color: var(--fundo-site);
+}
+
+/*Header*/
+.header {
+  background-color: var(--fundo-navbar);
+  color: var(--texto-claro);
+  padding: 0.3rem 1rem; /* Menor padding */
+ 
+  
+  top: 0;
+  z-index: 100;
+  height: 50px; /* Navbar bem baixa */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Container para o conteúdo da nav */
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo ajustada */
+.sun-logo {
+  height: 30px; /* Logo compacta */
+  width: auto; /* Garante que a imagem seja proporcional */
+  margin-right: 0.5rem;
+}
+
+/* Links bem compactos */
+.nav-links {
+  display: flex;
+  gap: 1rem; /* Menos espaçamento entre os links */
+}
+
+.nav-link {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.8rem; /* Fonte menor */
+  padding: 0.2rem 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--cor-secundaria);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/*  Hero  */
+/*  Hero Section  */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
+  color: var(--texto-claro);
+  margin-bottom: 4rem;
+  box-shadow: none; 
+  border: none; 
+  width: 100%; 
+}
+
+/* Ajuste da hero-content dentro da hero-section */
+/*  Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
+  color: var(--texto-claro);
+  margin-bottom: 4rem;
+  box-shadow: none; 
+  border: none; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+/* Ajuste da hero-content dentro da hero-section */
+.hero-content {
+  flex: 1;
+  max-width: 600px; 
+  margin: 0; 
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: var(--cor-secundaria-clara);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Garantindo que a imagem fique dentro da borda e não ultrapasse */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0; /* Removendo qualquer padding extra ao redor da imagem */
+  margin: 0; /* Removendo qualquer margem ao redor da imagem */
+  overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do contêiner */
+  height: auto; /* Manter a proporção da imagem */
+  object-fit: cover; /* Garante que a imagem se ajuste ao espaço sem distorcer */
+  animation: fadeIn 1s ease forwards;
+  margin: 0; /* Garantindo que a imagem não tenha margens */
+  padding: 0; /* Garantindo que a imagem não tenha padding */
+  display: block; /* Remove qualquer espaço indesejado abaixo da imagem */
+}
+
+#titulo h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: #000000 0 0 10px;
+}
+
+#cor2 {
+  color: var(--cor-destaque);
+  text-shadow: #391c02 0 0 10px;
+}
+
+/* ===== Responsividade para telas pequenas ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Empilha o texto e a imagem verticalmente */
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    height: auto; /* Garante que a imagem seja ajustada proporcionalmente */
+  }
+}
+
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--cor-destaque);
+  color: var(--texto-claro);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--sombra-media);
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--cor-primaria-clara);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-forte);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: var(--sombra-forte);
+  object-fit: cover;
+  animation: fadeIn 5s ease forwards;
+}
+
+/* ===== Features Section ===== */
+.features-section {
+  
+  background-color: var(--fundo-site);
+  margin-top: 1rem; /* Adiciona um pequeno valor negativo para empurrar a seção para cima */
+  padding-top: 10rem; /* Se você precisar de algum padding interno na parte superior */
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Menor espaçamento entre os cards */
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+
+
+
+
+
+#cartoes{
+  width: 100%;
+  height:150px;
+  min-height: 100px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+#cartoes:hover {
+  background-color: #fff1ebd5;
+  transform: scale(1.05);
+  transition: 0.8s;
+  box-shadow: var(--cor-destaque) 0 0 10px;
+}
+
+.feature-icon {
+  font-size: 3rem; /* Ícones menores */
+  margin-bottom: 2rem;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem; /* Menos margem entre título e descrição */
+}
+
+
+.feature-card p {
+  font-size: 0.85rem;
+  margin-top: 0; /* Remove qualquer margem acima do parágrafo */
+  margin-bottom: 0; /* Remove qualquer margem abaixo do parágrafo */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .features-grid {
+    gap: 1rem; /* Menor espaçamento entre cards */
+  }
+
+  .feature-card {
+    flex: 1 1 100%; /* Faz com que os cards ocupem toda a largura em telas pequenas */
+    max-width: 100%; /* Garantindo que a largura máxima seja 100% */
+  }
+
+  .feature-icon {
+    font-size: 1.8rem; /* Ícones ainda menores em dispositivos móveis */
+  }
+
+  .feature-card h3 {
+    font-size: 1rem; /* Títulos menores em dispositivos móveis */
+  }
+
+  .feature-card p {
+    font-size: 0.85rem; /* Texto menor em dispositivos móveis */
+  }
+}
+
+
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--fundo-rodape);
+  color: var(--texto-claro);
+  padding: 1rem 2rem; /* Reduzido para um padding menor */
+  border-top: 10px solid var(--cor-primaria-clara);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinhamento no topo */
+  gap: 1.5rem; /* Menos espaço entre as colunas */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 180px; /* Colunas mais estreitas */
+}
+
+.footer-column h3 {
+  color: var(--cor-secundaria-clara);
+  margin-bottom: 0.5rem;
+  font-size: 1rem; /* Fonte menor */
+}
+
+.footer-column p,
+.footer-links li {
+  margin-bottom: 0.2rem; /* Menor espaço entre itens */
+  font-size: 0.75rem; /* Fonte mais compacta */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 0.75rem; /* Tamanho de fonte menor */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--cor-destaque);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Fonte menor para o copyright */
+  color: var(--texto-secundario);
+}
+
+
+
+/* Responsividade para celular, tablets  */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .footer-column {
+    text-align: left !important; /* alinhamento para a esquerda em celulares*/
+  }
+  
+  .copyright {
+    padding: 0 1rem;
+  }
+}
+
+
+/* Responsividade do site */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+/*  Aimações para os cards  */
+@keyframes fadeInUp {  
+  0% { opacity: 0; transform: translateY(30px); }  
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes fadeIn { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; } 
+}
+
