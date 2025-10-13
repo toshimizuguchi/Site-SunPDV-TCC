@@ -45,7 +45,7 @@ function App() {
 
         {/* Features Section */}
 
-        <section className="features-section" style={{height: '500px'}}>
+        <section className="features-section">
             <div className="section-title-container">
               <div className="section-title" id="titulo">
                   <h2>Por que escolher o <span id="cor2">Sun PDV</span> ?</h2>
