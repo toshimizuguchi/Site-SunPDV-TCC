@@ -78,10 +78,10 @@ const PagDown = () => {
           </div>
 
           <div className="hero-image">
-            <img 
-              src="/telafunc.png" 
-              alt="Sun PDV em funcionamento" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            <img
+              className="product-screenshot"
+              src="/telafunc.png"
+              alt="Sun PDV em funcionamento"
             />
           </div>
         </div>

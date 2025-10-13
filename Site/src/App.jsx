@@ -37,8 +37,8 @@ function App() {
             <Link to="/Download" className="btn-primary">Baixar Agora</Link>
           </div>
           <div className="hero-image">
-            <div class="img-tela">
-            <img src="/Tela_de_cadastro.png" alt="Logo tela login"></img>
+            <div className="img-tela">
+              <img className="product-screenshot" src="/Tela_de_cadastro.png" alt="Tela de cadastro do Sun PDV" />
             </div>
           </div>
         </section>

@@ -44,7 +44,7 @@ const PagSobr = () => {
               </p>
             </div>
             <div className="image">
-              <img src="/telavendas.png" alt="Imagem de vendas" />
+              <img className="product-screenshot" src="/telavendas.png" alt="Tela de vendas do Sun PDV" />
             </div>
           </div>
         </section>
