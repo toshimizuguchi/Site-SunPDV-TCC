@@ -1,8 +1,23 @@
 # Sun PDV — Site (React + Vite)
 
+![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white) ![Vite 6](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white) ![Node >= 18](https://img.shields.io/badge/Node-%3E%3D18-339933?logo=node.js&logoColor=white) ![Deploy: GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=github)
+
+- [Demo](https://toshimizuguchi.github.io/Site-SunPDV-TCC)
+- [Como executar](#como-executar-localmente)
+- [Scripts](#scripts-disponiveis)
+- [Deploy](#deploy-no-github-pages)
+
+### Início rápido
+```bash
+cd Site
+npm install
+npm run dev
+```
+
+---
+
 Site institucional do Sun PDV construído com React e Vite. Este repositório contém a aplicação front‑end (SPA) que apresenta o produto, páginas de informações e a área de download.
 
-• Demo: https://toshimizuguchi.github.io/Site-SunPDV-TCC
 
 ## Visão geral
 O projeto é uma Single Page Application com rotas públicas para navegação:
