@@ -108,10 +108,12 @@ body, html {
 
 .image img {
   width: 100%;
-  max-width: 550px;
+  max-width: 560px;
   height: auto;
-  border-radius: 15px;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  object-fit: contain;
+  box-shadow: var(--sombra-forte);
   animation: fadeIn 1s ease forwards;
 }
 
