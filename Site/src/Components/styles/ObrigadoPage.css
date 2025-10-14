@@ -1,4 +1,6 @@
-/* ===== Global ===== */
+
+
+/*  Global  */
 body, html {
   margin: 0;
   padding: 0;
@@ -8,14 +10,13 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* ===== App Container ===== */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
+/*  Header  */
 .header {
   background-color: var(--fundo-navbar);
   color: var(--texto-claro);
@@ -29,7 +30,7 @@ body, html {
   justify-content: space-between;
 }
 
-/* ===== Thank You Section ===== */
+/* Obrigado*/
 .thank-you-section {
   display: flex;
   justify-content: center;
@@ -65,23 +66,23 @@ body, html {
   color: var(--texto-secundario);
 }
 
-/* Ajuste do alinhamento dos passos */
+/* Passo a passo */
 .steps-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
-  align-items: center; /* Alinha todos os passos ao centro */
+  align-items: center; 
   justify-content: center;
 }
 
 .step {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  align-items: center; /* Alinha o número e o conteúdo na horizontal */
-  justify-content: center; /* Alinha os itens centralizados */
-  text-align: center; /* Centraliza o conteúdo textual */
-  width: 100%; /* Garante que a largura ocupe toda a seção */
+  width: 100%;
+  max-width: 400px;
 }
 
 .step-number {
@@ -98,10 +99,10 @@ body, html {
 }
 
 .step-content {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  text-align: left; 
+  flex: 1;
 }
+
 
 .step-content h3 {
   margin: 0;
@@ -114,7 +115,7 @@ body, html {
   color: var(--texto-secundario);
 }
 
-/* ===== Support Link ===== */
+/* Suporte*/
 .support-text {
   font-size: 1rem;
   margin-top: 1rem;
@@ -130,7 +131,7 @@ body, html {
   text-decoration: underline;
 }
 
-/* ===== Footer ===== */
+/*  Footer */
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
@@ -188,7 +189,7 @@ body, html {
   color: var(--texto-secundario);
 }
 
-/* ===== Animations ===== */
+/* Animações */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -198,7 +199,7 @@ body, html {
   100% { opacity: 1; }
 }
 
-/* ===== Responsividade ===== */
+/*  Responsividade  */
 @media (max-width: 768px) {
   .thank-you-card {
     padding: 2rem 1rem;

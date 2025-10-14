@@ -23,10 +23,10 @@ function App() {
         </div>
       </header>
 
-      {/* Main Content */}
+      {/*Mains content*/}
       <main className="main-content" id="fundo">
         
-        {/* Hero Section */}
+        {/* section */}
         <section className="hero">
           <div className="hero-content">
             <h1>Sistema PDV <span>completo</span> para seu negócio</h1>
@@ -43,7 +43,7 @@ function App() {
           </div>
         </section>
 
-        {/* Features Section */}
+       
 
         <section className="features-section">
             <div className="section-title-container">

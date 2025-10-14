@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const TermsOfService = () => {
   return (
     <div className="app-container">
-      {/* Header (mesmo de outras páginas) */}
+      {/* Header*/}
       <header className="header">
         <div className="nav-container">
           <div className="logo">
@@ -29,12 +29,12 @@ const TermsOfService = () => {
         <div className="policy-content">
           <div className="policy-section">
             <h2>1. Aceitação dos Termos</h2>
-            <p>Ao instalar ou utilizar o Sun PDV, você concorda com estes Termos de Uso.</p>
+            <p>Ao instalar ou utilizar o Sun PDV, você concorda com estes Termos de Uso e se compromete a cumprir todas as disposições aqui estabelecidas.</p>
           </div>
 
           <div className="policy-section">
             <h2>2. Licença de Uso</h2>
-            <p>Concedemos uma licença limitada, não exclusiva e intransferível para usar o Sun PDV.</p>
+            <p>Concedemos uma licença limitada, não exclusiva e intransferível para usar o Sun PDV de acordo com as condições especificadas neste documento.</p>
             
             <h3>2.1 Restrições</h3>
             <p>Você concorda em não:</p>
@@ -42,6 +42,18 @@ const TermsOfService = () => {
               <li>Copiar, modificar ou distribuir o software ilegalmente</li>
               <li>Usar o software para fins ilegais</li>
               <li>Contornar medidas de segurança</li>
+              <li>Realizar engenharia reversa do código</li>
+              <li>Remover avisos de direitos autorais</li>
+            </ul>
+          </div>
+          
+          <div className="policy-section">
+            <h2>3. Responsabilidades do Usuário</h2>
+            <p>Ao utilizar o Sun PDV, você se responsabiliza por:</p>
+            <ul>
+              <li>Manter a segurança de suas credenciais de acesso</li>
+              <li>Garantir a precisão dos dados inseridos no sistema</li>
+              <li>Cumprir com todas as leis e regulamentos aplicáveis</li>
             </ul>
           </div>
 
@@ -51,7 +63,7 @@ const TermsOfService = () => {
         </div>
       </main>
 
-      {/* Footer (mesmo de outras páginas) */}
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-column">

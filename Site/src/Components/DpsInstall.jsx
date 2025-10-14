@@ -9,7 +9,7 @@ const DpsInstall = () => {
 
   return (
     <div className="app-container">
-      {/* Navbar */}
+      {/*Navbar*/}
       <header className="header">
         <div className="nav-container">
           <div className="logo">
@@ -27,7 +27,7 @@ const DpsInstall = () => {
         </div>
       </header>
 
-      {/* Conteúdo Principal */}
+      {/* Main principal */}
       <main className="main-content">
         <section className="thank-you-section">
           <div className="thank-you-card">
@@ -72,7 +72,7 @@ const DpsInstall = () => {
         </section>
       </main>
 
-     {/* Rodapé */}
+      {/*footer*/}
 <footer className="footer">
   <div className="footer-content">
     <div className="footer-column">

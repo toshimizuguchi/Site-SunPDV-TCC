@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PrivacyPolicy = () => {
   return (
     <div className="app-container">
-      {/* Header (mesmo de outras páginas) */}
+      {/* Header*/}
       <header className="header">
         <div className="nav-container">
           <div className="logo">
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
       <main className="policy-container">
         <div className="policy-header">
           <h1>Política de <span>Privacidade</span></h1>
-          <p>Como protegemos e utilizamos suas informações</p>
+          <p>Como protegemos e utilizamos suas informações no Sun PDV</p>
         </div>
 
         <div className="policy-content">
@@ -57,13 +57,23 @@ const PrivacyPolicy = () => {
             </ul>
           </div>
 
+          <div className="policy-section">
+            <h2>3. Proteção de Dados</h2>
+            <p>Implementamos medidas de segurança para proteger suas informações:</p>
+            <ul>
+              <li>Criptografia de dados sensíveis</li>
+              <li>Acesso restrito às informações pessoais</li>
+              <li>Monitoramento contínuo de segurança</li>
+            </ul>
+          </div>
+
           <div className="last-updated">
             <p>Última atualização: {new Date().toLocaleDateString()}</p>
           </div>
         </div>
       </main>
 
-      {/* Footer (mesmo de outras páginas) */}
+      {/* Footer*/}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-column">

@@ -1,4 +1,6 @@
-/* ===== Global ===== */
+
+
+/*  Global  */
 body, html {
   margin: 0;
   padding: 0;
@@ -8,30 +10,29 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* ===== App Container ===== */
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ===== Header ===== */
-/* ===== Header Super Compacto ===== */
+/* Header */
+
 .header {
   background-color: var(--fundo-navbar);
   color: var(--texto-claro);
-  padding: 0.3rem 1rem; /* Menor padding */
+  padding: 0.3rem 1rem; 
   box-shadow: var(--sombra-leve);
   position: sticky;
   top: 0;
   z-index: 100;
-  height: 50px; /* Navbar bem baixa */
+  height: 50px; 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Container para o conteúdo da nav */
+
 .nav-container {
   width: 100%;
   display: flex;
@@ -39,24 +40,24 @@ body, html {
   align-items: center;
 }
 
-/* Logo ajustada */
+/* Logo  */
 .sun-logo {
-  height: 30px; /* Logo compacta */
-  width: auto; /* Garante que a imagem seja proporcional */
+  height: 30px;
+  width: auto; 
   margin-right: 0.5rem;
 }
 
-/* Links bem compactos */
+/* nav */
 .nav-links {
   display: flex;
-  gap: 1rem; /* Menos espaçamento entre os links */
+  gap: 1rem; 
 }
 
 .nav-link {
   color: var(--texto-claro);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.8rem; /* Fonte menor */
+  font-size: 0.8rem; 
   padding: 0.2rem 0;
   position: relative;
   transition: color 0.3s;
@@ -79,13 +80,13 @@ body, html {
 }
 
 
-/* ===== Hero ===== */
+/*  Hero  */
 .hero {
-  display: flex; /* Flexbox para alinhar lado a lado */
-  flex-wrap: wrap; /* Permite que os itens se ajustem em telas pequenas */
-  align-items: center; /* Alinha os itens no centro verticalmente */
-  justify-content: space-between; /* Coloca a imagem e o texto nas extremidades */
-  gap: 2rem; /* Espaçamento entre o texto e a imagem */
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2rem; 
   padding: 4rem 2rem;
   background: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria-escura));
   color: var(--texto-claro);
@@ -93,19 +94,19 @@ body, html {
 }
 
 .hero-content {
-  flex: 1; /* Deixa o conteúdo do texto ocupar o restante do espaço */
-  max-width: 600px; /* Limita a largura do texto */
+  flex: 1; 
+  max-width: 600px;
 }
 
 .hero-image img {
-  width: 100%; /* Faz com que a imagem ocupe toda a largura disponível */
-  max-width: 500px; /* Limita o tamanho máximo da imagem */
+  width: 100%; 
+  max-width: 500px;
   box-shadow: var(--sombra-forte);
-  object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+  object-fit: cover; 
   animation: fadeIn 1s ease forwards;
 }
 
-/* Modal de Termos */
+/*  Termos */
 .terms-modal-overlay {
   position: fixed;
   top: 0;
@@ -246,7 +247,7 @@ body, html {
 
 
 
-/* ===== Botões ===== */
+/*  Botões  */
 .download-btn {
   
   display: inline-flex;
@@ -284,11 +285,12 @@ body, html {
   animation: spin 1s linear infinite;
 }
 
+/* Animações */
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-/* ===== Cards (Features / FAQ) ===== */
+/* Cards (Features / FAQ)  */
 .features-grid {
   display: flex;
   flex-wrap: wrap;
@@ -327,8 +329,8 @@ body, html {
 }
 
 .section-title {
-  text-align: center;       /* centraliza todo o texto dentro */
-  margin-bottom: 2.5rem;   /* espaço abaixo da seção */
+  text-align: center;       
+  margin-bottom: 2.5rem;   
 }
 
 .section-title h2 {
@@ -341,52 +343,52 @@ body, html {
 .section-title p {
   font-size: 1.1rem;
   color: var(--texto-secundario);
-  max-width: 600px;        /* largura máxima para melhor leitura */
-  margin: 0 auto;          /* garante centralização dentro do max-width */
+  max-width: 600px;       
+  margin: 0 auto;          
   line-height: 1.6;
 }
 
 .cta-section{
   font-size: 1.1rem;
   color: var(--texto-secundario);
-  max-width: 600px;        /* largura máxima para melhor leitura */
-  margin: 0 auto;          /* garante centralização dentro do max-width */
+  max-width: 600px;        
+  margin: 0 auto;          
   line-height: 1.6;
 }
 
-/* ===== Footer ===== */
+/*  Footer */
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
-  padding: 1rem 1.5rem; /* Padding reduzido ainda mais */
+  padding: 1rem 1.5rem; 
   border-top: 2px solid var(--cor-primaria-clara);
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: nowrap; /* Não permite quebra de linha */
+  flex-wrap: nowrap; 
   justify-content: space-between;
-  align-items: flex-start; /* Alinha os itens ao topo */
-  gap: 1.5rem; /* Reduz o espaçamento entre as colunas */
-  max-width: 1200px; /* Limita a largura total */
+  align-items: flex-start; 
+  gap: 1.5rem; 
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
 .footer-column {
-  flex: 1 1 180px; /* Colunas um pouco menores */
-  min-width: 160px; /* Garante que não fiquem muito largas */
+  flex: 1 1 180px; 
+  min-width: 160px; 
 }
 
 .footer-column h3 {
   color: var(--cor-secundaria-clara);
-  margin-bottom: 0.4rem; /* Menos espaçamento */
+  margin-bottom: 0.4rem; 
   font-size: 1rem;
 }
 
 .footer-column p,
 .footer-links li {
   margin-bottom: 0.2rem;
-  font-size: 0.75rem; /* Texto ainda menor */
+  font-size: 0.75rem; 
 }
 
 .footer-links {
@@ -410,14 +412,14 @@ body, html {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
-  font-size: 0.7rem; /* Texto ainda menor */
+  font-size: 0.7rem; 
   color: var(--texto-secundario);
 }
 
 
 
 
-/* ===== Responsividade ===== */
+/*  Responsividade  */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
