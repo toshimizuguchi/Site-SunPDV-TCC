@@ -4,9 +4,16 @@ import "./styles/DownloadPage.css"; // Estilização da página
 
 const PagDown = () => {
   const [isDownloading, setIsDownloading] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
   const navigate = useNavigate();
 
   const handleDownload = () => {
+    if (!termsAccepted) {
+      setShowTermsModal(true);
+      return;
+    }
+    
     navigate("/obrigado");
     setIsDownloading(true);
 
@@ -20,6 +27,16 @@ const PagDown = () => {
       document.body.removeChild(link);
       setIsDownloading(false);
     }, 1000);
+  };
+
+  const acceptTerms = () => {
+    setTermsAccepted(true);
+    setShowTermsModal(false);
+    handleDownload();
+  };
+
+  const closeModal = () => {
+    setShowTermsModal(false);
   };
 
   return (
@@ -75,6 +92,8 @@ const PagDown = () => {
                 <>📥 Baixar Sun PDV</>
               )}
             </button>
+            
+            
           </div>
 
           <div className="hero-image">
@@ -85,6 +104,32 @@ const PagDown = () => {
             />
           </div>
         </div>
+
+        {/* Modal de Termos */}
+        {showTermsModal && (
+          <div className="terms-modal-overlay">
+            <div className="terms-modal">
+              <div className="terms-modal-header">
+                <h2>Termos de Uso</h2>
+                <button className="close-modal" onClick={closeModal}>×</button>
+              </div>
+              <div className="terms-modal-content">
+                <p>Para continuar com o download do Sun PDV, você precisa aceitar nossos Termos de Uso e Política de Privacidade.</p>
+                <p>Ao utilizar nosso software, você concorda em:</p>
+                <ul>
+                  <li>Não redistribuir o software</li>
+                  <li>Utilizar o software de acordo com as licenças disponíveis</li>
+                  <li>Respeitar os direitos autorais e propriedade intelectual</li>
+                </ul>
+                <p>Para mais detalhes, consulte nossa <Link to="/termos" onClick={closeModal}>página de Termos de Uso</Link> e <Link to="/privacidade" onClick={closeModal}>Política de Privacidade</Link>.</p>
+              </div>
+              <div className="terms-modal-footer">
+                <button className="cancel-btn" onClick={closeModal}>Cancelar</button>
+                <button className="accept-btn" onClick={acceptTerms}>Aceitar e Baixar</button>
+              </div>
+            </div>
+          </div>
+        )}
 
         <section className="features-section">
           <div className="section-title">
