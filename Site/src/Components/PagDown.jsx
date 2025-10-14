@@ -18,10 +18,10 @@ const PagDown = () => {
     setIsDownloading(true);
 
     setTimeout(() => {
-      const fileUrl = "/arquivos/pagdown.zip";
+      const fileUrl = "./Components/SunPDVapp/SunPDV-1.0.exe";
       const link = document.createElement("a");
       link.href = fileUrl;
-      link.download = "pagdown.zip"; // Exemplo para teste
+      link.download = "SunPDV-1.0.exe"; // Exemplo para teste
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
