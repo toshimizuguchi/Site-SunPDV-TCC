@@ -8,26 +8,27 @@ const PagDown = () => {
   const [showTermsModal, setShowTermsModal] = useState(false);
   const navigate = useNavigate();
 
-  const handleDownload = () => {
-    if (!termsAccepted) {
-      setShowTermsModal(true);
-      return;
-    }
-    
-    navigate("/obrigado");
-    setIsDownloading(true);
+const handleDownload = () => {
+  if (!termsAccepted) {
+    setShowTermsModal(true);
+    return;
+  }
+  
+  navigate("/obrigado");
+  setIsDownloading(true);
 
-    setTimeout(() => {
-      const fileUrl = "./Components/SunPDVapp/SunPDV-1.0.exe";
-      const link = document.createElement("a");
-      link.href = fileUrl;
-      link.download = "SunPDV-1.0.exe"; // Exemplo para teste
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setIsDownloading(false);
-    }, 1000);
-  };
+  setTimeout(() => {
+    // No Vite, arquivos em public/ são servidos na raiz
+    const fileUrl = "/SunPDVapp/SunPDV-1.0.exe";
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "SunPDV-1.0.exe";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setIsDownloading(false);
+  }, 1000);
+};
 
   const acceptTerms = () => {
     setTermsAccepted(true);
