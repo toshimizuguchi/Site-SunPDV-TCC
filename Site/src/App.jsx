@@ -38,7 +38,7 @@ function App() {
           </div>
           <div className="hero-image">
             <div className="img-tela">
-              <img className="product-screenshot" src="/Tela_de_cadastro.png" alt="Tela de cadastro do Sun PDV" />
+              <img className="product-screenshot" src="logosun.png" alt="Tela de cadastro do Sun PDV" />
             </div>
           </div>
         </section>
