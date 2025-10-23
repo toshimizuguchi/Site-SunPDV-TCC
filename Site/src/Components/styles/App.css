@@ -662,6 +662,7 @@ body, html {
 .section-title h2, 
 .section-title p {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 #cartoes{
   width: 100%;
@@ -669,6 +670,7 @@ body, html {
   min-height: 100px;
   padding: 20px;
   margin-top: 80px;
+  z-index: 2;
 }
 
 #cartoes:hover {
@@ -676,16 +678,19 @@ body, html {
   transform: scale(1.05);
   transition: 0.8s;
   box-shadow: var(--cor-destaque) 0 0 10px;
+  z-index: 2;
 }
 
 .feature-icon {
   font-size: 3rem; 
   margin-bottom: 2rem;
+  z-index: 2;
 }
 
 .feature-card h3 {
   font-size: 1rem;
   margin-bottom: 0.2rem; 
+  z-index: 2;
 }
 
 
@@ -693,6 +698,7 @@ body, html {
   font-size: 0.85rem;
   margin-top: 0; 
   margin-bottom: 0; 
+  z-index: 2;
 }
 
 /* Responsividade */
