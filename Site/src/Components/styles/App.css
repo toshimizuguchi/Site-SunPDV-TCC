@@ -623,52 +623,41 @@ body, html {
   position: relative;
   overflow: hidden;
   padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* A imagem de fundo vem aqui */
-.features-section::before {
-  content: "";
+/* imagem fica por trás */
+.imagem-fundo {
   position: absolute;
-  inset: 0;
-  background: url("/img_caixa/istockphoto-1030645640-612x612.jpg") center/cover no-repeat;
-  filter: blur(10px);
-  transform: scale(1.1);
-  z-index: 0;
+  inset: 0; /* cobre toda a área da seção */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre sem distorcer */
+  filter: blur(10px) brightness(0.9); /* aplica o blur */
+  z-index: 0; /* fica atrás */
 }
 
-/* Degradê amarelo */
+/* camada de degradê amarelo sobre a imagem */
 .features-section::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom right,
-    rgba(255, 200, 0, 0.4),
-    rgba(255, 150, 0, 0.6)
+    rgba(255, 200, 0, 0.3),
+    rgba(255, 150, 0, 0.5)
   );
   z-index: 1;
 }
 
-/* Garante que o conteúdo fique por cima */
-.features-content {
+
+.section-title-container,
+.features-grid {
   position: relative;
   z-index: 2;
-}
-
-.features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem; 
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.imagem-caixa-reg {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
 }
 
 #cartoes{
