@@ -319,6 +319,15 @@ body, html {
   margin-top: 0; 
   margin-bottom: 0; 
 }
+/*  Aimações para os cards  */
+@keyframes fadeInUp {  
+  0% { opacity: 0; transform: translateY(30px); }  
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes fadeIn { 
+  0% { opacity: 0; } 
+  100% { opacity: 1; } 
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -346,40 +355,51 @@ body, html {
 
 
 
-/*  Footer  */
+/* ====== FOOTER ====== */
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
-  padding: 1rem 2rem; 
-  border-top: 10px solid var(--cor-primaria-clara);
+  padding: 2rem 1.5rem;
+  border-top: 2px solid var(--cor-primaria-clara);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Conteúdo principal do rodapé */
 .footer-content {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start; 
-  gap: 1.5rem; 
-  max-width: 1400px;
-  margin: 0 auto;
+  justify-content: center;      /* centraliza horizontalmente */
+  align-items: flex-start;      /* alinha os topos */
+  gap: 4rem;                    /* espaçamento entre colunas */
+  flex-wrap: wrap;              /* empilha no mobile */
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
+/* Colunas individuais */
 .footer-column {
-  flex: 1 1 180px; 
+  flex: 1 1 250px;              /* largura mínima e ajuste automático */
+  min-width: 200px;
 }
 
 .footer-column h3 {
   color: var(--cor-secundaria-clara);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .footer-column p,
 .footer-links li {
-  margin-bottom: 0.2rem; 
-  font-size: 0.75rem; 
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--texto-claro);
 }
 
+/* Lista de links */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -389,7 +409,7 @@ body, html {
 .footer-links a {
   color: var(--texto-claro);
   text-decoration: none;
-  font-size: 0.75rem; 
+  font-size: 0.85rem;
   transition: color 0.3s;
 }
 
@@ -397,12 +417,17 @@ body, html {
   color: var(--cor-destaque);
 }
 
+/* Linha inferior (copyright) */
 .copyright {
   text-align: center;
-  margin-top: 1rem;
-  font-size: 0.7rem; 
+  font-size: 0.8rem;
   color: var(--texto-secundario);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  width: 100%;
 }
+
+
 
 
 
@@ -440,14 +465,5 @@ body, html {
     flex-direction: column;
     gap: 1rem;
   }
-}
-/*  Aimações para os cards  */
-@keyframes fadeInUp {  
-  0% { opacity: 0; transform: translateY(30px); }  
-  100% { opacity: 1; transform: translateY(0); } 
-}
-@keyframes fadeIn { 
-  0% { opacity: 0; } 
-  100% { opacity: 1; } 
 }
 
