@@ -618,46 +618,45 @@ body, html {
   animation: fadeIn 5s ease forwards;
 }
 
-/* Features S */
 .features-section {
   position: relative;
   overflow: hidden;
-  padding: 4rem 2rem;
+  min-height: 500px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
-/* imagem fica por trás */
-.imagem-fundo {
+/* 🔹 A imagem ocupa o fundo todo */
+.fundo-imagem {
   position: absolute;
-  inset: 0; /* cobre toda a área da seção */
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* cobre sem distorcer */
-  filter: blur(10px) brightness(0.9); /* aplica o blur */
-  z-index: 0; /* fica atrás */
+  object-fit: cover;
+  filter: blur(5px) brightness(0.8); /* desfoca e escurece levemente */
+  z-index: 0;
 }
 
-/* camada de degradê amarelo sobre a imagem */
-.features-section::after {
-  content: "";
+/* 🔹 Degradê amarelo sobre a imagem */
+.fundo-degrade {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom right,
-    rgba(255, 200, 0, 0.3),
-    rgba(255, 150, 0, 0.5)
+    rgba(255, 200, 0, 0.35),
+    rgba(255, 150, 0, 0.55)
   );
   z-index: 1;
 }
 
-
-.section-title-container,
-.features-grid {
+/* 🔹 Conteúdo sobre as camadas */
+.section-content {
   position: relative;
   z-index: 2;
+  text-align: center;
+  padding: 3rem 2rem;
 }
 
 #cartoes{

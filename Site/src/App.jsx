@@ -49,8 +49,9 @@ function App() {
            <img
               src="/img_caixa/istockphoto-1030645640-612x612.jpg"
                 alt="Imagem de um caixa registradora"
-                className="imagem-caixa-reg"
+                className="fundo-imagem"
             />
+             <div className="fundo-degrade"></div>
             <div className="section-title-container">
       
               <div className="section-title" id="titulo">
