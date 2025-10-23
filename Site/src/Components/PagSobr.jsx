@@ -147,11 +147,9 @@ const PagSobr = () => {
         <div className="footer-content">
           <div className="footer-column">
             <h3>Sun PDV</h3>
-            <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/Sobre-Nos">Sobre Nós</Link></li>
-              <li><Link to="/Download">Download</Link></li>
-            </ul>
+              <div className="footer-column">
+                 <p>Soluções completas para gestão de vendas e fluxo de caixa</p>
+            </div>
           </div>
 
           <div className="footer-column">
