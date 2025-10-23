@@ -744,6 +744,10 @@ body, html {
   line-height: 1.6;
   color: var(--texto-secundario);
 }
+#footer_termos{
+  position: relative;
+  top: -20px
+}
 
 .footer-links {
   list-style: none;
