@@ -184,7 +184,7 @@ const handleDownload = () => {
         </section>
       </main>
 
-      {/* Rodapé */}
+     {/* Footer */}
       <footer className="footer">
               <div className="footer-content">
                 <div className="footer-column">
@@ -200,8 +200,6 @@ const handleDownload = () => {
                     <li>WhatsApp: (12) 98765-4321</li>
                   </ul>
                 </div>
-              </div>
-      
                 <div className="footer-column">
                    <h3>Legal</h3>
                     <ul className="footer-links">
@@ -210,6 +208,7 @@ const handleDownload = () => {
                       <li><Link to="/licenca">Licença</Link></li>
                     </ul>
                 </div>
+              </div>
 
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} Sun PDV. Todos os direitos reservados.</p>

@@ -72,35 +72,31 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer*/}
+{/* Footer */}
       <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-column">
-            <h3>Sun PDV</h3>
-            <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/Sobre-Nos">Sobre Nós</Link></li>
-              <li><Link to="/Download">Download</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h3>Suporte</h3>
-            <ul className="footer-links">
-              <li><Link to="/contato">Contato</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
-            <h3>Legal</h3>
-            <ul className="footer-links">
-              <li><Link to="/privacidade">Política de Privacidade</Link></li>
-              <li><Link to="/termos">Termos de Uso</Link></li>
-              <li><Link to="/licenca">Licença</Link></li>
-            </ul>
-          </div>
-        </div>
+              <div className="footer-content">
+                <div className="footer-column">
+                  <h3>Sun PDV</h3>
+                  <p>Soluções completas para gestão de vendas e fluxo de caixa</p>
+                </div>
+      
+                <div className="footer-column">
+                  <h3>Contato</h3>
+                  <ul className="footer-links">
+                    <li>suporte@sunpdv.com</li>
+                    <li>(12) 3456-7890</li>
+                    <li>WhatsApp: (12) 98765-4321</li>
+                  </ul>
+                </div>
+                <div className="footer-column">
+                   <h3>Legal</h3>
+                    <ul className="footer-links">
+                      <li><Link to="/privacidade">Política de Privacidade</Link></li>
+                      <li><Link to="/termos">Termos de Uso</Link></li>
+                      <li><Link to="/licenca">Licença</Link></li>
+                    </ul>
+                </div>
+              </div>
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} Sun PDV. Todos os direitos reservados.</p>
         </div>
