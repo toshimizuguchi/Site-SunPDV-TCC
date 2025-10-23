@@ -91,7 +91,7 @@ function App() {
                 </div>
               </div>
       
-                <div id='footer_termos'>
+                <div className="footer-column">
                    <h3>Legal</h3>
                     <ul className="footer-links">
                       <li><Link to="/privacidade">Política de Privacidade</Link></li>
