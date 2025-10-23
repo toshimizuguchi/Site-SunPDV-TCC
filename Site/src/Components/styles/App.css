@@ -355,7 +355,7 @@ body, html {
 
 
 
-/* ====== FOOTER ====== */
+/* footer */
 .footer {
   background-color: var(--fundo-rodape);
   color: var(--texto-claro);
@@ -370,19 +370,20 @@ body, html {
 /* Conteúdo principal do rodapé */
 .footer-content {
   display: flex;
-  justify-content: center;      /* centraliza horizontalmente */
-  align-items: flex-start;      /* alinha os topos */
-  gap: 4rem;                    /* espaçamento entre colunas */
-  flex-wrap: wrap;              /* empilha no mobile */
-  max-width: 1200px;
+  justify-content: center;     
+  align-items: flex-start;      
+  gap: 5rem;                   
+  flex-wrap: nowrap;              
+  max-width: 1000px;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0, auto 1.5rem, auto;
+  text-align: left;
 }
 
 /* Colunas individuais */
 .footer-column {
-  flex: 1 1 250px;              /* largura mínima e ajuste automático */
-  min-width: 200px;
+  flex: 0 0 auto;              
+  min-width: 220px;
 }
 
 .footer-column h3 {
