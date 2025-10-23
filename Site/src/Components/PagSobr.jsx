@@ -151,15 +151,6 @@ const PagSobr = () => {
           </div>
 
           <div className="footer-column">
-            <h3>Links Rápidos</h3>
-            <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/Sobre-Nos">Sobre Nós</Link></li>
-              <li><Link to="/Download">Download</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-column">
             <h3>Contato</h3>
             <ul className="footer-links">
               <li>suporte@sunpdv.com</li>
