@@ -709,18 +709,21 @@ body, html {
   gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto 2rem;
+  align-items: start;
 }
 
 .footer-column:nth-child(1) {
-  justify-self: start;
+  text-align: left;
 }
 
 .footer-column:nth-child(2) {
-  justify-self: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .footer-column:nth-child(3) {
-  justify-self: end;
+  text-align: right;
+  margin-left: auto;
 }
 
 .footer-column {
@@ -749,6 +752,7 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: inherit;
 }
 
 .footer-links li {
