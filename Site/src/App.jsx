@@ -46,7 +46,13 @@ function App() {
        
 
         <section className="features-section">
+           <img
+              src="/img_caixa/istockphoto-1030645640-612x612.jpg"
+                alt="Imagem de um caixa registradora"
+                className="imagem-caixa-reg"
+            />
             <div className="section-title-container">
+      
               <div className="section-title" id="titulo">
                   <h2>Por que escolher o <span id="cor2">Sun PDV</span> ?</h2>
                     <p>Conheça as vantagens do nosso sistema de gestão de vendas</p>

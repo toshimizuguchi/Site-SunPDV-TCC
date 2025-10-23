@@ -620,10 +620,39 @@ body, html {
 
 /* Features S */
 .features-section {
-  
-  background-color: var(--fundo-site);
-  margin-top: 1rem; 
-  padding-top: 10rem; 
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+/* A imagem de fundo vem aqui */
+.features-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/img_caixa/istockphoto-1030645640-612x612.jpg") center/cover no-repeat;
+  filter: blur(10px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Degradê amarelo */
+.features-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 200, 0, 0.4),
+    rgba(255, 150, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+/* Garante que o conteúdo fique por cima */
+.features-content {
+  position: relative;
+  z-index: 2;
 }
 
 .features-grid {
