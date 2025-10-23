@@ -625,7 +625,8 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--texto-principal);
+  z-index: 2;
 }
 
 
@@ -657,6 +658,7 @@ body, html {
   z-index: 2;
   text-align: center;
   padding: 3rem 2rem;
+  z-index: 2;
 }
 
 .section-title h2, 
