@@ -746,7 +746,11 @@ body, html {
 }
 #footer_termos{
   position: relative;
-  top: -20px
+  top: -20px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--texto-secundario);
 }
 
 .footer-links {
