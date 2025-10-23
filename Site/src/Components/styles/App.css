@@ -709,21 +709,18 @@ body, html {
   gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto 2rem;
-  align-items: start;
 }
 
 .footer-column:nth-child(1) {
-  text-align: left;
+  justify-self: start;
 }
 
 .footer-column:nth-child(2) {
-  text-align: center;
-  margin: 0 auto;
+  justify-self: center;
 }
 
 .footer-column:nth-child(3) {
-  text-align: right;
-  margin-left: auto;
+  justify-self: end;
 }
 
 .footer-column {
@@ -744,14 +741,6 @@ body, html {
   line-height: 1.6;
   color: var(--texto-secundario);
 }
-#footer_termos{
-  position: relative;
-  top: -20px;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--texto-secundario);
-}
 
 .footer-links {
   list-style: none;
@@ -760,7 +749,6 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: inherit;
 }
 
 .footer-links li {
