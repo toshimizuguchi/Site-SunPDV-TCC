@@ -61,13 +61,13 @@ function App() {
 
 
           <div className="features-grid">
-            <div className="feature-card" id="cartoes">
+            <div className="feature-card">
               <div className="feature-icon">🚀</div>
               <h3>Rápido e Eficiente</h3>
               <p>Processamento ágil de vendas mesmo com grande movimento</p>
             </div>
 
-            <div className="feature-card" id="cartoes">
+            <div className="feature-card">
               <div className="feature-icon">💻</div>
               <h3>Multiplataforma</h3>
               <p>Funciona em Windows e Linux sem problemas de compatibilidade</p>
