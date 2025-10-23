@@ -47,7 +47,7 @@ function App() {
 
         <section className="features-section">
               <img src="/Site/public/img_caixa/istockphoto-1030645640-612x612.jpg"></img>
-             <div className="fundo-degrade" />
+             
              
             <div className="section-title-container">
       
