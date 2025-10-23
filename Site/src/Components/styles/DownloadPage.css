@@ -365,14 +365,14 @@ body, html {
 }
 
 .footer-content {
-  display: flex;
+  display: grid;
   flex-wrap: nowrap; 
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start; 
-  gap: 3rem;
-  text-align: center; 
-  max-width: 900px; 
+  gap: 3rem; 
+  max-width: 100px; 
   margin: 0 auto;
+  text-align: left;
 }
 
 .footer-column {
