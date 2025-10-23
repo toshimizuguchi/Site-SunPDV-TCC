@@ -52,11 +52,13 @@ function App() {
                 className="fundo-imagem"
             />
              <div className="fundo-degrade"></div>
+              <div className="section-content">
             <div className="section-title-container">
       
               <div className="section-title" id="titulo">
                   <h2>Por que escolher o <span id="cor2">Sun PDV</span> ?</h2>
                     <p>Conheça as vantagens do nosso sistema de gestão de vendas</p>
+                    </div>
               </div>
                 </div>
 
