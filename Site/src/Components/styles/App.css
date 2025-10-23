@@ -296,7 +296,7 @@ background-attachment: fixed;
 }
 
 .section-title p {
-  color: var(--cinza-escuro);
+  color: var(--texto-escuro);
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
