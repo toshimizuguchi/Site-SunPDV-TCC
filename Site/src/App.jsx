@@ -89,8 +89,6 @@ function App() {
                     <li>WhatsApp: (12) 98765-4321</li>
                   </ul>
                 </div>
-              </div>
-      
                 <div className="footer-column">
                    <h3>Legal</h3>
                     <ul className="footer-links">
@@ -99,6 +97,9 @@ function App() {
                       <li><Link to="/licenca">Licença</Link></li>
                     </ul>
                 </div>
+              </div>
+      
+                
 
         <div className="copyright">
           <p>Copyright 2024 © Sun PDV Software - Todos os direitos reservados</p>
