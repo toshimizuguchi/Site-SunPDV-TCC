@@ -169,8 +169,8 @@ html, body {
 
 /* Product screenshot */
 .product-screenshot {
-  width: 80%;
-  max-width: 420px;
+  width: 100%;
+  max-width: 320px;
   aspect-ratio: auto;
   height: auto;
   object-fit: contain;
