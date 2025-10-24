@@ -1,11 +1,13 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function PaginaAci() {
-  const location = useLocation();
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location]);
+export default function PaginaAci() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null
 }
 
-export default PaginaAci;
