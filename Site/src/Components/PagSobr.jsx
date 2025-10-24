@@ -124,17 +124,23 @@ const PagSobr = () => {
           </div>
           <div className="team-grid">
             <div className="team-card">
-              <div className="team-avatar">👨‍💻</div>
+              <div className="team-avatar">
+                <img src="/img_team/team2.png" alt="João Pedro de Moraes Mendes" className="team-image" />
+              </div>
               <h3>João Pedro de Moraes Mendes</h3>
               <p>Co-Fundador e Desenvolvedor de Software</p>
             </div>
             <div className="team-card"> 
-              <div className="team-avatar">👨‍💼</div>
+              <div className="team-avatar">
+                <img src="/img_team/team1.png" alt="João Pedro Silva Schinato" className="team-image" />
+              </div>
               <h3>João Pedro Silva Schinato</h3>
               <p>Fundador e Data Engineer</p>
             </div>
             <div className="team-card">
-              <div className="team-avatar">👨‍💻</div>
+              <div className="team-avatar">
+                <img src="/img_team/team3.png" alt="Vinicius Toshi Mizuguchi" className="team-image" />
+              </div>
               <h3>Vinicius Toshi Mizuguchi</h3>
               <p>Co-Fundador e Desenvolvedor Web</p>
             </div>
