@@ -116,21 +116,13 @@ body, html {
   animation: fadeIn 1s ease forwards;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-  }
 
-  .hero-content {
-    text-align: center;
-  }
-}
 
 /* Features */
 .features-section {
   padding: 2rem;
   text-align: center;
+  background-color: var(--fundo-site);
 }
 
 .features-grid {
@@ -319,6 +311,13 @@ body, html {
 }
 /*  Responsividade  */
 @media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
   .features-grid, .stats-grid, .team-grid {
     flex-direction: column;
     align-items: center;
@@ -332,4 +331,5 @@ body, html {
     flex-direction: column;
     gap: 1rem;
   }
+   
 }
