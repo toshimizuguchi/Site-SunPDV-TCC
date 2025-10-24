@@ -212,8 +212,8 @@ body, html {
   aspect-ratio: 16 / 9;
   height: auto;
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: var(--sombra-forte);
+  
+ 
 }
 
 #titulo h2 {
