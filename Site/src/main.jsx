@@ -8,14 +8,14 @@ import DpsInstall from './Components/DpsInstall.jsx';
 import PrivacyPolicy from './Components/PrivacyPolitics.jsx';
 import TermsOfService from './Components/TermsOfService.jsx';
 import LicensePage from './Components/LicensePage.jsx';
-import PaginaAci from './Components/PaginaAci.jsx';
+
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  <ScrollToTop />
+ 
     <Routes>
       
       <Route path="/" element={<App />} />
