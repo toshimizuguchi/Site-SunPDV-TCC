@@ -11,7 +11,7 @@ function App() {
         <div className="nav-container">
           <div className="logo">
             <div className="logo-sunpdv">
-              <img src="/logo3.png" alt="Logo SunPDV" className="sun-logo" />
+              <img src="/logosunpdv.png" alt="Logo SunPDV" className="sun-logo" />
             </div>
             
           </div>
