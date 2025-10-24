@@ -51,7 +51,6 @@ body, html {
   scroll-behavior: smooth;
 }
 
-
 /*  App Container  */
 .app-container {
   display: flex;
@@ -114,7 +113,6 @@ body, html {
 }
 
 .nav-link::after {
-  content: '';
   position: absolute;
   width: 0%;
   height: 2px;
@@ -228,18 +226,7 @@ body, html {
   text-shadow: #391c02 0 0 10px;
 }
 
-/*  Responsividade para telas pequenas  */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column; 
-    text-align: center;
-  }
 
-  .hero-image img {
-    max-width: 100%; 
-    height: auto; 
-  }
-}
 
 
 
@@ -327,7 +314,7 @@ background-attachment: fixed;
   box-shadow: var(--sombra-forte);
 }
 
-/* ícone */
+
 .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -337,6 +324,16 @@ background-attachment: fixed;
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .hero {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
   .features-grid {
     gap: 1rem; 
   }

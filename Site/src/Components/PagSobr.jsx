@@ -34,7 +34,7 @@ const PagSobr = () => {
           <div className="hero-inner">
             <div className="hero-content">
               <h1 className="title">
-                Sobre o{' '}
+                Sobre o 
                 <span style={{ color: 'var(--primary)' }}>Sun</span>
                 <span style={{ color: 'var(--secondary)' }}>PDV</span>
               </h1>
@@ -106,6 +106,10 @@ const PagSobr = () => {
                 <p>Clientes satisfeitos</p>
               </div>
               <div className="stat-item">
+                <div className="numerosobe">
+                  <CountUp
+                    start={0}
+                    end={inView ? 99}
                 <h3>99%</h3>
                 <p>Disponibilidade</p>
               </div>
