@@ -262,7 +262,7 @@ body, html {
   position: relative;
   padding: 6rem 1rem;
   text-align: center;
-  background:
+  background-color:
     linear-gradient(to bottom right, rgba(255,200,0,.35), rgba(255,150,0,.55));
   color: var(--texto-principal);
 }
