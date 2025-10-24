@@ -106,10 +106,6 @@ const PagSobr = () => {
                 <p>Clientes satisfeitos</p>
               </div>
               <div className="stat-item">
-                <div className="numerosobe">
-                  <CountUp
-                    start={0}
-                    end={inView ? 99}
                 <h3>99%</h3>
                 <p>Disponibilidade</p>
               </div>
@@ -146,7 +142,7 @@ const PagSobr = () => {
         </section>
       </main>
 
-    {/* Footer */}
+                      {/* Footer */}
       <footer className="footer">
               <div className="footer-content">
                 <div className="footer-column">
