@@ -46,7 +46,8 @@ function App() {
        
 
         <section className="features-section">
-              <img src="/img_caixa/imagemcaixa.jpg"></img>
+              <img src="/img_caixa/imagemcaixa.jpg" className='img_caixa'></img>
+
             <div className="section-title-container">
               <div className="section-title" id="titulo">
                   <h2>Por que escolher o <span id="cor2">Sun PDV</span> ?</h2>
