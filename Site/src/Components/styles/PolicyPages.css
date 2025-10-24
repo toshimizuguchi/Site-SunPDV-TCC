@@ -130,20 +130,108 @@ body, html {
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .policy-container {
+    padding: 1.5rem;
+  }
+
+  .policy-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .policy-header p {
+    font-size: 1rem;
+  }
+
+  .policy-content {
+    padding: 2rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .policy-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .policy-section p,
+  .policy-section ul {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .policy-container {
     padding: 1rem;
   }
 
   .policy-header h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .policy-header p {
+    font-size: 0.95rem;
   }
 
   .policy-content {
     padding: 1.5rem;
+    border-radius: 12px;
   }
-  
+
   .policy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .policy-section p,
+  .policy-section ul {
+    font-size: 0.95rem;
+  }
+
+  .last-updated {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-header h1 {
     font-size: 1.6rem;
+  }
+
+  .policy-header p {
+    font-size: 0.9rem;
+  }
+
+  .policy-content {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .policy-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .policy-section h3 {
+    font-size: 1rem;
+  }
+
+  .policy-section p,
+  .policy-section ul {
+    font-size: 0.9rem;
+  }
+
+  .policy-section li::before {
+    left: -14px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .last-updated {
+    text-align: center;
+    font-size: 0.8rem;
   }
 }

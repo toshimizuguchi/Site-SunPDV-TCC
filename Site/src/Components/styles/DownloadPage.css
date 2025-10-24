@@ -420,11 +420,124 @@ body, html {
 
 
 
-/*  Responsividade  */
-@media (max-width: 768px) {
+/*  Responsividade */
+
+
+@media (min-width: 1600px) {
+  .hero {
+    padding: 6rem 4rem;
+  }
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  .feature-card {
+    max-width: 420px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .feature-card {
+    flex: 1 1 260px;
+    padding: 2rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    flex: 1 1 300px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 320px;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 0.9rem;
+    justify-content: center;
   }
 
   .features-grid {
@@ -432,8 +545,93 @@ body, html {
     align-items: center;
   }
 
-  .nav-container {
-    flex-direction: column;
+  .feature-card {
+    max-width: 90%;
+    padding: 1.8rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .section-title p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .footer-column h3 {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .footer-column p,
+  .footer-links li {
+    font-size: 0.7rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card {
+    padding: 1.2rem;
+  }
+
+  .footer {
+    padding: 0.8rem;
+  }
+
+  .footer-column h3 {
+    font-size: 0.85rem;
+  }
+
+  .copyright {
+    font-size: 0.65rem;
   }
 }

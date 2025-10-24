@@ -287,40 +287,130 @@ html, body {
   color: var(--cor-primaria-clara);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Dispositivos grandes */
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
   }
-
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
+  .hero-content h1 {
+    font-size: 2.4rem;
   }
-
+  .hero-content p {
+    font-size: 1.05rem;
+  }
   .features-grid {
-    gap: 1rem;
+    gap: 1.5rem;
   }
-
   .feature-card {
-    max-width: 100%;
-  }
-
-  .feature-icon {
-    font-size: 1.8rem;
-  }
-
-  .feature-card h3 {
-    font-size: 1rem;
-  }
-
-  .feature-card p {
-    font-size: 0.85rem;
+    max-width: 300px;
   }
 }
 
-/* animação simples (se usar) */
+/* Tablets  */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sun-logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .features-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.9rem;
+  }
+}
+
+/* Dispositivos maiores (600px) */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .feature-icon {
+    font-size: 2rem;
+  }
+  .feature-card {
+    padding: 1.2rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* Dispositivo pequeno (400px) */
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .section-title h2 {
+    font-size: 1.3rem;
+  }
+  .feature-card {
+    padding: 1rem;
+  }
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+
+/* animação simples  */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }

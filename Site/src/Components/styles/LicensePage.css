@@ -204,21 +204,6 @@ body, html {
   display: block; 
 }
 
-/*  Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img {
-    max-width: 100%; 
-    height: auto; 
-  }
-}
-
-
-
 .btn-primary {
   display: inline-block;
   padding: 1rem 2rem;
@@ -296,31 +281,6 @@ body, html {
   margin-bottom: 0; 
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .features-grid {
-    gap: 1rem; 
-  }
-
-  .feature-card {
-    flex: 1 1 100%; 
-    max-width: 100%; 
-  }
-
-  .feature-icon {
-    font-size: 1.8rem; 
-  }
-
-  .feature-card h3 {
-    font-size: 1rem; 
-  }
-
-  .feature-card p {
-    font-size: 0.85rem; 
-  }
-}
-
-
 
 /*  Footer  */
 .footer {
@@ -380,50 +340,172 @@ body, html {
   color: var(--texto-secundario);
 }
 
-
-
-/* Responsividade para celular, tablets  */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem;
+/* Responsividade */
+@media (min-width: 1600px) {
+  .hero {
+    padding: 6rem 4rem;
   }
-  
-  .footer-column {
-    text-align: left !important; 
+  .hero-content h1 {
+    font-size: 3.5rem;
   }
-  
-  .copyright {
-    padding: 0 1rem;
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  .feature-card {
+    max-width: 420px;
   }
 }
 
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .feature-card {
+    flex: 1 1 260px;
+    padding: 1.5rem;
+  }
+  .footer-content {
+    gap: 2rem;
+  }
+}
 
-/* Responsividade do site */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
   }
+  .hero-content {
+    max-width: 90%;
+  }
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-image img {
+    max-width: 400px;
+  }
+  .features-grid {
+    gap: 1.5rem;
+  }
+  .feature-card {
+    flex: 1 1 200px;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .hero-image img {
+    max-width: 320px;
+  }
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem;
+  }
   .features-grid {
     flex-direction: column;
     align-items: center;
   }
-
-  .nav-container {
+  .feature-card {
+    max-width: 90%;
+    padding: 1.8rem;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer-content {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
+  .footer-column {
+    width: 100%;
+  }
 }
-/*  Aimações para os cards  */
-@keyframes fadeInUp {  
-  0% { opacity: 0; transform: translateY(30px); }  
-  100% { opacity: 1; transform: translateY(0); } 
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .feature-icon {
+    font-size: 2rem;
+  }
+  .feature-card {
+    padding: 1.5rem;
+  }
+  .footer-column p,
+  .footer-links li {
+    font-size: 0.7rem;
+  }
 }
-@keyframes fadeIn { 
-  0% { opacity: 0; } 
-  100% { opacity: 1; } 
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  .feature-card {
+    padding: 1.2rem;
+  }
+  .footer {
+    padding: 0.8rem;
+  }
+  .footer-column h3 {
+    font-size: 0.85rem;
+  }
+  .copyright {
+    font-size: 0.65rem;
+  }
 }
+
+
 
