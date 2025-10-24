@@ -169,11 +169,12 @@ html, body {
 
 /* Product screenshot */
 .product-screenshot {
-  width: 100%;
-  max-width: 560px;
-  aspect-ratio: 16 / 9;
+  width: 80%;
+  max-width: 420px;
+  aspect-ratio: auto;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 /* Section title styling */
