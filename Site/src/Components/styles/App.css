@@ -173,7 +173,7 @@ html, body {
   max-width: 320px;
   aspect-ratio: auto;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
