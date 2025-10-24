@@ -34,7 +34,7 @@ const PagSobr = () => {
           <div className="hero-inner">
             <div className="hero-content">
               <h1 className="title">
-                Sobre o 
+                Sobre o {' '} 
                 <span style={{ color: 'var(--primary)' }}>Sun</span>
                 <span style={{ color: 'var(--secondary)' }}>PDV</span>
               </h1>
